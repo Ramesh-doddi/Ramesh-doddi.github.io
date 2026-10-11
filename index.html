@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Ramesh Doddi - Software Engineer specializing in C#, .NET, Azure, Cloud Microservices, and AI-powered enterprise systems.">
+  <title>Ramesh Doddi | Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient Glow Effects -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">&lt;Ramesh<span>Doddi</span> /&gt;</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Key Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="btn-nav">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot"></span> Available for Software Engineering Opportunities
+        </div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="highlight-text">Ramesh Doddi</span>.<br>
+          Software Engineer building scalable cloud & AI systems.
+        </h1>
+        <p class="hero-subtitle">
+          Specializing in <strong>C#, .NET, Microsoft Azure, and AI integrations</strong>. 1.5+ years of experience engineering cloud-native microservices, FHIR healthcare interoperability, and resilient enterprise applications.
+        </p>
+        <div class="hero-actions">
+          <a href="#experience" class="btn btn-primary">View Experience</a>
+          <a href="#projects" class="btn btn-outline">Explore Projects</a>
+          <a href="resume.pdf" target="_blank" class="btn btn-ghost" id="resumeBtn">Download Resume ↗</a>
+        </div>
+        <div class="quick-stats">
+          <div class="stat-item">
+            <span class="stat-number">1.5+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">Azure & AI</span>
+            <span class="stat-label">Cloud Native Stack</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">9.29</span>
+            <span class="stat-label">B.Tech CGPA</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Backend, Cloud & AI Engineering</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card main-about">
+          <h3>Architecting Resilient Enterprise Solutions</h3>
+          <p>
+            I am a Software Engineer focused on backend engineering, system reliability, and scalable application design. My experience spans building enterprise healthcare platforms (such as <strong>TeyaHealth</strong>), cloud-native microservices on Azure, and multi-tenant architectures with organization-based database sharding.
+          </p>
+          <p>
+            I have hands-on expertise integrating <strong>Azure OpenAI and Semantic Kernel</strong> to power clinical AI workflows (like AI Scribe), implementing multi-region model deployments, and designing FHIR-compliant interoperability gateways.
+          </p>
+        </div>
+        <div class="about-card highlight-card">
+          <div class="card-icon">⚡</div>
+          <h4>Cloud & Distributed Systems</h4>
+          <p>Proficient in Azure Container Apps, API Management, Service Bus messaging, and resilient microservices.</p>
+        </div>
+        <div class="about-card highlight-card">
+          <div class="card-icon">🤖</div>
+          <h4>Applied AI & ML</h4>
+          <p>Integrating Large Language Models via Semantic Kernel and building time-series anomaly detection engines.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-tag">Technical Arsenal</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-desc">Technologies and frameworks I utilize to build production-grade software.</p>
+      </div>
+      <div class="skills-container">
+        <!-- Languages & Core -->
+        <div class="skill-category">
+          <h3 class="category-title">Languages & Core</h3>
+          <div class="skill-tags">
+            <span class="skill-pill">C#</span>
+            <span class="skill-pill">Java</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">SQL</span>
+            <span class="skill-pill">OOP & Clean Code</span>
+            <span class="skill-pill">DBMS & Data Structures</span>
+          </div>
+        </div>
+
+        <!-- Frameworks & UI -->
+        <div class="skill-category">
+          <h3 class="category-title">Frameworks & Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-pill">ASP.NET Core</span>
+            <span class="skill-pill">.NET 8</span>
+            <span class="skill-pill">Blazor Server</span>
+            <span class="skill-pill">MudBlazor</span>
+            <span class="skill-pill">Syncfusion</span>
+            <span class="skill-pill">RESTful APIs</span>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-category">
+          <h3 class="category-title">Cloud & DevOps (Azure)</h3>
+          <div class="skill-tags">
+            <span class="skill-pill">Azure Container Apps</span>
+            <span class="skill-pill">Azure App Services</span>
+            <span class="skill-pill">Azure API Management</span>
+            <span class="skill-pill">Azure Service Bus</span>
+            <span class="skill-pill">Azure Key Vault</span>
+            <span class="skill-pill">GitHub Actions (CI/CD)</span>
+          </div>
+        </div>
+
+        <!-- AI & Domain Tech -->
+        <div class="skill-category">
+          <h3 class="category-title">AI & Specialized Systems</h3>
+          <div class="skill-tags">
+            <span class="skill-pill">Azure OpenAI</span>
+            <span class="skill-pill">Semantic Kernel</span>
+            <span class="skill-pill">FHIR Interoperability</span>
+            <span class="skill-pill">Time-Series Anomaly Detection</span>
+            <span class="skill-pill">Database Sharding</span>
+            <span class="skill-pill">Docusaurus</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <span class="section-tag">Career History</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-desc">My professional journey in enterprise healthcare engineering and forward-deployed AI systems.</p>
+      </div>
+      <div class="timeline">
+        <!-- DataDios -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">Jul 2026 — Sep 2026</span>
+            <h3 class="timeline-role">Forward Deployed Engineer</h3>
+            <h4 class="timeline-company">DataDios</h4>
+            <ul class="experience-list">
+              <li>Designed and deployed a multi-model time-series anomaly detection engine combining AutoETS forecasting with conformal prediction intervals to detect point, contextual, and collective anomalies across enterprise metrics.</li>
+              <li>Engineered custom Claude AI agent workflows with reusable skills and automation instructions to streamline PR reviews and GitHub operations via GitHub CLI.</li>
+              <li>Parallelized development workflows across multiple Git worktrees to isolate tasks, accelerating rapid prototyping and debugging cycles.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Praxzen -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-period">Jan 2025 — Jun 2026</span>
+            <h3 class="timeline-role">Software Engineer</h3>
+            <h4 class="timeline-company">Praxzen</h4>
+            <ul class="experience-list">
+              <li>Engineered <strong>TeyaHealth</strong>, an enterprise cloud-based Electronic Health Record (EHR) platform using C#, .NET 8, Blazor Server, MudBlazor, and Syncfusion.</li>
+              <li>Built and scaled cloud-native microservices on Azure Container Apps, created secure APIs with Azure API Management, and implemented organization-level database sharding for multi-tenant scalability.</li>
+              <li>Enhanced the <strong>AI Scribe</strong> clinical documentation system utilizing Azure OpenAI, Azure Cognitive Services, and Semantic Kernel with multi-region fallback mechanisms and Azure Service Bus resilience.</li>
+              <li>Integrated FHIR healthcare interoperability services, connected e-prescription workflows with Ensora, and authored developer and API docs using Docusaurus.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Projects Section -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-tag">Highlights</span>
+        <h2 class="section-title">Key Projects & Architectures</h2>
+        <p class="section-desc">Production platforms and complex engineering solutions I have designed and delivered.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-banner banner-1">
+            <span class="banner-badge">Healthcare & AI</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">TeyaHealth — Enterprise Cloud EHR & AI Scribe</h3>
+            <p class="project-summary">
+              A comprehensive cloud EHR system featuring an AI-powered clinical documentation assistant (AI Scribe) that converts doctor-patient conversations into structured medical notes with high accuracy and resilience.
+            </p>
+            <div class="project-tags">
+              <span>C# / .NET 8</span>
+              <span>Blazor Server</span>
+              <span>Azure OpenAI</span>
+              <span>Semantic Kernel</span>
+              <span>Service Bus</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Ramesh-doddi" target="_blank" class="link-btn">GitHub Profile ↗</a>
+              <span class="link-badge">Enterprise Platform</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-banner banner-2">
+            <span class="banner-badge">Machine Learning & Anomaly Detection</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Time-Series Anomaly Detection Engine</h3>
+            <p class="project-summary">
+              A multi-model time-series anomaly detection engine utilizing AutoETS forecasting combined with conformal prediction intervals to detect point, contextual, and collective anomalies across daily and weekly metrics.
+            </p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>AutoETS</span>
+              <span>Conformal Prediction</span>
+              <span>Time-Series</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Ramesh-doddi" target="_blank" class="link-btn">GitHub Profile ↗</a>
+              <span class="link-badge">DataDios</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-banner banner-3">
+            <span class="banner-badge">Interoperability & Cloud</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">FHIR Healthcare Gateway & E-Prescription</h3>
+            <p class="project-summary">
+              Reusable FHIR integration services compliant with Azure Health Data Services, enabling seamless medical record exchange and digital e-prescription workflows with external partners like Ensora.
+            </p>
+            <div class="project-tags">
+              <span>Azure Health Data</span>
+              <span>FHIR Standard</span>
+              <span>Azure API Management</span>
+              <span>Database Sharding</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Ramesh-doddi" target="_blank" class="link-btn">GitHub Profile ↗</a>
+              <span class="link-badge">Cloud-Native</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <span class="section-tag">Qualifications</span>
+        <h2 class="section-title">Education & Certifications</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="card-icon">🎓</div>
+          <h3>B.Tech Degree</h3>
+          <h4 style="color: var(--accent-secondary); margin-bottom: 0.5rem;">GITAM University, Hyderabad</h4>
+          <p><strong>Graduated: 2025</strong> | <span style="color: #34d399; font-weight: 700;">CGPA: 9.29 / 10</span></p>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">
+            Strong background in Computer Science, Database Management Systems, Object-Oriented Programming, and Software Engineering.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="card-icon">📜</div>
+          <h3>Certifications & Internships</h3>
+          <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; color: var(--text-muted); font-size: 0.92rem;">
+            <li>✨ <strong>IBM SkillsBuild Internship</strong></li>
+            <li>✨ <strong>AICTE Virtual Internship</strong></li>
+            <li>✨ <strong>TCS iON</strong> — Career Edge: Young Professional</li>
+          </ul>
+        </div>
+
+        <div class="about-card">
+          <div class="card-icon">🌐</div>
+          <h3>Languages & Interests</h3>
+          <p style="margin-bottom: 0.75rem;"><strong>Languages:</strong> English, Telugu</p>
+          <p><strong>Personal Interests:</strong> Meditation, Badminton, Chess, Reading Books</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-tag">Let's Connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-desc">I am interested in full-time Software Engineer positions, distributed systems, and AI engineering opportunities.</p>
+      </div>
+      
+      <div class="contact-card">
+        <div class="contact-info">
+          <h3>Direct Contact</h3>
+          <p>Feel free to reach out via email or connect on LinkedIn and GitHub.</p>
+          
+          <div class="contact-details-list">
+            <div class="contact-row">
+              <span class="contact-icon">📧</span>
+              <span id="emailText">ramesh.r.doddi@gmail.com</span>
+              <button class="btn-copy" id="copyEmailBtn" title="Copy Email">Copy</button>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">📞</span>
+              <span>+91 8186985583</span>
+            </div>
+            <div class="contact-row">
+              <span class="contact-icon">📍</span>
+              <span>Anakapalli, Andhra Pradesh, India (Open to Remote & Relocation)</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/Ramesh-doddi" target="_blank" class="social-btn">GitHub (Ramesh-doddi) ↗</a>
+            <a href="https://linkedin.com/in/ramesh-doddi" target="_blank" class="social-btn">LinkedIn (Ramesh Doddi) ↗</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Recruiter / Collaborator Name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="contact@company.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Hi Ramesh, I came across your profile and would like to discuss..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p>© <span id="currentYear"></span> Ramesh Doddi. Software Engineer.</p>
+      <div class="footer-links">
+        <a href="#hero">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
