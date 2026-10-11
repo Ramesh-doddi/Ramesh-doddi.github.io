@@ -350,4 +350,46 @@ I --> J`,
       });
     });
   });
+
+  // -------------------------------------------------------------
+  // 7. KNOWLEDGE VAULT SEARCH & CATEGORY FILTER
+  // -------------------------------------------------------------
+  const vFilterBtns = document.querySelectorAll('.v-filter-btn');
+  const vaultCards = document.querySelectorAll('.vault-card');
+  const vaultSearchInput = document.getElementById('vaultSearchInput');
+
+  let currentVFilter = 'all';
+  let currentSearchQuery = '';
+
+  function applyVaultFilters() {
+    vaultCards.forEach(card => {
+      const cardCat = card.dataset.vcat || '';
+      const cardKeywords = (card.dataset.keywords || '') + ' ' + (card.querySelector('h3')?.textContent || '') + ' ' + (card.querySelector('p')?.textContent || '');
+      
+      const matchesCat = (currentVFilter === 'all' || cardCat === currentVFilter);
+      const matchesSearch = (!currentSearchQuery || cardKeywords.toLowerCase().includes(currentSearchQuery.toLowerCase()));
+
+      if (matchesCat && matchesSearch) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  }
+
+  vFilterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      vFilterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentVFilter = btn.dataset.vfilter;
+      applyVaultFilters();
+    });
+  });
+
+  if (vaultSearchInput) {
+    vaultSearchInput.addEventListener('input', (e) => {
+      currentSearchQuery = e.target.value.trim();
+      applyVaultFilters();
+    });
+  }
 });

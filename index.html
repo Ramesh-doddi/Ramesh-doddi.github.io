@@ -41,6 +41,7 @@
         <a href="#pillars" class="nav-link">Pillars</a>
         <a href="#cases" class="nav-link">Case Studies</a>
         <a href="#skills" class="nav-link">Arsenal</a>
+        <a href="#vault" class="nav-link">Knowledge Vault</a>
         <a href="#writing" class="nav-link">Journal</a>
         <a href="#experience" class="nav-link">Timeline</a>
         <a href="resume.pdf" target="_blank" class="nav-btn nav-resume">Resume ↗</a>
@@ -350,10 +351,236 @@
       </div>
     </section>
 
-    <!-- SECTION 4: ENGINEERING JOURNAL / LINKEDIN WRITING VAULT -->
+    <!-- SECTION 4: THE KNOWLEDGE VAULT (TECHNICAL NOTES, DSA SERIES & BOOK REFLECTIONS) -->
+    <section id="vault" class="section">
+      <div class="section-header">
+        <div class="section-tag">04 · KNOWLEDGE VAULT & STUDY SERIES</div>
+        <h2 class="section-title">Technical Notes, DSA Masterclasses & Book Reflections</h2>
+        <p class="section-subtitle">
+          Explore my published study notes, multi-part Data Structures & Algorithms masterclasses with direct PDF attachments, architectural cheat sheets, and book reflections from my LinkedIn archive.
+        </p>
+      </div>
+
+      <!-- Search & Category Filters -->
+      <div class="vault-controls">
+        <div class="vault-search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="vaultSearchInput" placeholder="Search notes (e.g. Heaps, Linked List, Book, Binary Search, Java, Overthinking)..." aria-label="Search study notes">
+        </div>
+
+        <div class="vault-filter-pills" role="group" aria-label="Filter knowledge vault">
+          <button class="v-filter-btn active" data-vfilter="all">All Resources</button>
+          <button class="v-filter-btn" data-vfilter="dsa">DSA & Algorithms Series</button>
+          <button class="v-filter-btn" data-vfilter="architecture">Systems & Architecture</button>
+          <button class="v-filter-btn" data-vfilter="books">Books & Mindset</button>
+        </div>
+      </div>
+
+      <!-- Vault Cards Grid -->
+      <div class="vault-grid" id="vaultGrid">
+        <!-- 1. The Heaps Masterclass -->
+        <article class="vault-card" data-vcat="dsa" data-keywords="heaps min-heap max-heap priority queue k-th element algorithms dsa pdf">
+          <div class="v-card-top">
+            <span class="v-series-badge">7-Part Masterclass · PDF Notes Included</span>
+            <span class="v-domain">DSA · Heaps</span>
+          </div>
+          <h3>The Complete Heaps Masterclass (Basics to Medium)</h3>
+          <p>
+            An exhaustive 7-part deep-dive covering min-heap invariants, in-place heap transforms, K-th element selection, partial ordering tricks, and merging multiple sorted streams efficiently. Accompanied by hand-crafted notes and PDF documentation.
+          </p>
+          <div class="v-series-links">
+            <span class="v-series-label">Multi-Part Links & PDFs:</span>
+            <div class="v-pills-row">
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7408360140392861696" target="_blank" rel="noreferrer" class="v-pill">Part 1 (Basics) ↗</a>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7408667554325499904" target="_blank" rel="noreferrer" class="v-pill">Part 2 (Basics) ↗</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQGURxdFRxyK5w/feedshare-document-sanitized-pdf/B56ZtDgO48HgA8-/0/1766364083153?e=1792072800&v=beta&t=4CztocwNGhIkPwcgT5JD3D4XeAbJwKh7y4XkpQWzamg" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">Part 3 (PDF Notes) 📥</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQGb6UHD9woedw/feedshare-document-chunked-pdf/B56ZtOmHmbG0Bo-/0/1766550175916?e=1792072800&v=beta&t=tUwSFdINI48FP7THSC92qhY544Tb_BOBnUN6LC5ElRk" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">Medium Part 1 (PDF) 📥</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQFEMYluw1w2kQ/feedshare-document-sanitized-pdf/B56ZtT0.nrGsBA-/0/1766637973207?e=1792072800&v=beta&t=gSh4vooEXb_ezyay6pCvWWu_jkiyQWTQwVNXht8hqFo" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">Medium Part 2 (PDF) 📥</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQGdt5r-zXB8Aw/feedshare-document-sanitized-pdf/B56ZtXh_klGsA8-/0/1766700088981?e=1792072800&v=beta&t=Fh9ohRn5BmcjpHB4qwC1YXGRKFedd0k8pxQtFzFOiUg" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">Medium Part 3 (PDF) 📥</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQEEWMailfkGhA/feedshare-document-sanitized-pdf/B56ZtbeSE3G0A8-/0/1766766226266?e=1792072800&v=beta&t=lLqitKrCQOqMf1d-blDaDqZoeYURETCjLDs81ONCZZo" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">Medium Part 4 (PDF) 📥</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Linked Lists Transformations -->
+        <article class="vault-card" data-vcat="dsa" data-keywords="linked list singly doubly pointers clone random flatten reverse dsa pdf">
+          <div class="v-card-top">
+            <span class="v-series-badge">Hard & Medium Series · PDF Notes Included</span>
+            <span class="v-domain">DSA · Linked Lists</span>
+          </div>
+          <h3>Advanced Linked Lists & Memory Pointer Architectures</h3>
+          <p>
+            Detailed transformations across singly and doubly linked lists: random pointer deep cloning without memory corruption, multi-level list flattening, K-group reversals, and carry-forward summation.
+          </p>
+          <div class="v-series-links">
+            <span class="v-series-label">Verified Posts & Notes:</span>
+            <div class="v-pills-row">
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQHaMmXakDZkqg/feedshare-document-sanitized-pdf/B56Zo.zp_PIcA8-/0/1761990337330?e=1792072800&v=beta&t=7q6ao3mij2y2JagkjyBcHqLHZh-RlDb3r08D0KTkJNw" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">SLL Hard 3: Clone Random (PDF) 📥</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQEWHJyt86uZmg/feedshare-document-chunked-pdf/B56Zo.zT4OJ8Bo-/0/1761990238708?e=1792072800&v=beta&t=yEBnVmEA5SnXuI_ZqyycOOHy0_noBOuGIgJIMEJmHGc" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">SLL Hard 2: Flatten List (PDF) 📥</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQFez822hlKEbA/feedshare-document-sanitized-pdf/B56ZojWsUtI4A8-/0/1761529752317?e=1792072800&v=beta&t=9aIFsvHxk9FM5GiiudTvLKBDNZx4AlgewvOa7p_0IQ4" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">SLL Hard 1: Reverse K-Groups (PDF) 📥</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQGtI-7mknQNJw/feedshare-document-url-metadata-scrapper-pdf/B56ZojWRSII4A4-/0/1761529640012?e=1792072800&v=beta&t=OQHBbofuFvcl3DSSg3UlGU1xdOnwoyL_PUrkuR9C3aQ" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">DLL Medium: Two-Way Deletions (PDF) 📥</a>
+              <a href="https://media.licdn.com/dms/document/media/v2/D561FAQFJSA_LhRYzxg/feedshare-document-url-metadata-scrapper-pdf/B56ZojVvcnJ4A0-/0/1761529501064?e=1792072800&v=beta&t=IyW2EcOQCF7aQ18rp35WnM2SZbqhXVnjNsX4QjBXMk4" target="_blank" rel="noreferrer" class="v-pill v-pill-pdf">SLL Medium 7: Carry Arithmetic (PDF) 📥</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Binary Search in 2D Matrices -->
+        <article class="vault-card" data-vcat="dsa" data-keywords="binary search 2d matrix sorted search algorithms dsa">
+          <div class="v-card-top">
+            <span class="v-series-badge">Algorithms Deep Dive</span>
+            <span class="v-domain">DSA · Search</span>
+          </div>
+          <h3>Binary Search in 2D Matrices & Staircase Elimination</h3>
+          <p>
+            Logarithmic search patterns across row- and column-sorted 2D grids. Eliminating entire rows/columns in O(M+N) time versus binary staircase partitioning, upper/lower bounds, and edge validation.
+          </p>
+          <div class="v-card-footer">
+            <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7383303360189435904" target="_blank" rel="noreferrer" class="v-primary-link">
+              <span>Read Binary Search Guide on LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 4. Java Fundamentals & Patterns -->
+        <article class="vault-card" data-vcat="dsa" data-keywords="java patterns basics loop math number theory competitive programming">
+          <div class="v-card-top">
+            <span class="v-series-badge">Foundations Series · 5 Parts</span>
+            <span class="v-domain">Language & Logic</span>
+          </div>
+          <h3>Java Syntax, Number Theory & Matrix Patterns</h3>
+          <p>
+            Essential Java programming foundations for problem solving: nested loop matrix pattern constructions, symmetry handling, basic number theory algorithms, and JVM memory behavior.
+          </p>
+          <div class="v-series-links">
+            <span class="v-series-label">Explore Parts:</span>
+            <div class="v-pills-row">
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7367744622988574720" target="_blank" rel="noreferrer" class="v-pill">Patterns Part 3 ↗</a>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7367744112864739328" target="_blank" rel="noreferrer" class="v-pill">Patterns Part 2 ↗</a>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7367743475464794113" target="_blank" rel="noreferrer" class="v-pill">Patterns Part 1 ↗</a>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7367742923028770817" target="_blank" rel="noreferrer" class="v-pill">Java Basics for DSA ↗</a>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7367745170894721025" target="_blank" rel="noreferrer" class="v-pill">Basic Maths in DSA ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5. Four Pillars of OOP & File Handling -->
+        <article class="vault-card" data-vcat="architecture" data-keywords="oop encapsulation abstraction inheritance polymorphism file handling c# java architecture">
+          <div class="v-card-top">
+            <span class="v-series-badge">Computer Science Core</span>
+            <span class="v-domain">Architecture & OOP</span>
+          </div>
+          <h3>The Four Pillars of OOP & System File Handling</h3>
+          <p>
+            Bridging theoretical textbook definitions with production software design: Encapsulation, Abstraction, Inheritance, and Polymorphism evaluated through real enterprise backend contracts and OS file streams.
+          </p>
+          <div class="v-series-links">
+            <span class="v-series-label">Read Articles:</span>
+            <div class="v-pills-row">
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7211944273213050880" target="_blank" rel="noreferrer" class="v-pill">Four Pillars of OOP ↗</a>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7208837733417398273" target="_blank" rel="noreferrer" class="v-pill">System File Handling ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6. Book Review: The Art of Not Overthinking -->
+        <article class="vault-card" data-vcat="books" data-keywords="book reading overthinking mindset author mental clarity psychology">
+          <div class="v-card-top">
+            <span class="v-series-badge">Book Reflection & Author Notes</span>
+            <span class="v-domain">Mindset & Books</span>
+          </div>
+          <h3>Book Reflections: "The Art of Not Overthinking"</h3>
+          <p>
+            Breaking mental feedback loops, controlling decision fatigue, and maintaining calm focus under demanding engineering sprints. Strategies for mental clarity and deliberate execution.
+          </p>
+          <div class="v-series-links">
+            <span class="v-series-label">Read Book Reflections:</span>
+            <div class="v-pills-row">
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7425777429132103680" target="_blank" rel="noreferrer" class="v-pill">"Some books don't push you to move on" ↗</a>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7420796479856107520" target="_blank" rel="noreferrer" class="v-pill">"Some books don't entertain" ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 7. Literary Reflection: I Don't Love You Anymore -->
+        <article class="vault-card" data-vcat="books" data-keywords="book reflection literature emotional closure personal growth author">
+          <div class="v-card-top">
+            <span class="v-series-badge">Book Reflection</span>
+            <span class="v-domain">Mindset & Books</span>
+          </div>
+          <h3>Reading Reflections: "I Don't Love You Anymore"</h3>
+          <p>
+            A personal reflection on emotional growth, acceptance, closure, and navigating life transitions with grace and resilience. Reflections from my reading journey.
+          </p>
+          <div class="v-card-footer">
+            <a href="https://www.linkedin.com/feed/update/urn%3Ali%3AugcPost%3A7418323351825219584" target="_blank" rel="noreferrer" class="v-primary-link">
+              <span>Read Full Reflection on LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 8. Engineering Essay: Marks Are Not Equal to Knowledge -->
+        <article class="vault-card" data-vcat="books" data-keywords="marks knowledge education engineering college textbook lessons learning">
+          <div class="v-card-top">
+            <span class="v-series-badge">Engineering Perspective</span>
+            <span class="v-domain">Education & Mindset</span>
+          </div>
+          <h3>"Marks Are Not Equal to Knowledge" & Lessons Beyond Textbooks</h3>
+          <p>
+            The profound gap between academic exam scores and genuine engineering craftsmanship. Why real technical capability is defined by debugging instincts, curiosity, and building working software.
+          </p>
+          <div class="v-series-links">
+            <span class="v-series-label">Read Essays:</span>
+            <div class="v-pills-row">
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7473443616871510016" target="_blank" rel="noreferrer" class="v-pill">"Marks Are Not Equal to Knowledge" ↗</a>
+              <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7473444637215580160" target="_blank" rel="noreferrer" class="v-pill">"Lessons Beyond The Textbook" ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 9. Philosophical Inquiry: Can We Really Store a Human Life? -->
+        <article class="vault-card" data-vcat="books" data-keywords="philosophy human life digital memory database consciousness thoughts">
+          <div class="v-card-top">
+            <span class="v-series-badge">Philosophical Inquiry</span>
+            <span class="v-domain">Data & Philosophy</span>
+          </div>
+          <h3>Can We Really Store a Human Life in Bits & Databases?</h3>
+          <p>
+            Examining digital preservation, neural models, memory permanence, and the boundaries between human identity and digitized information. An essay on technology and humanity.
+          </p>
+          <div class="v-card-footer">
+            <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7469435290768580608" target="_blank" rel="noreferrer" class="v-primary-link">
+              <span>Read Essay on LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- 10. Reflections: Silence in the Mountains -->
+        <article class="vault-card" data-vcat="books" data-keywords="silence mountains mindfulness mental reset nature creativity">
+          <div class="v-card-top">
+            <span class="v-series-badge">Mindfulness & Reflection</span>
+            <span class="v-domain">Mindset & Creativity</span>
+          </div>
+          <h3>"Silence in the Mountains is Never Empty"</h3>
+          <p>
+            Why intentional quietness away from screens and continuous notifications acts as a catalyst for creative breakthroughs, allowing engineering intuition to recharge.
+          </p>
+          <div class="v-card-footer">
+            <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7439007195876282370" target="_blank" rel="noreferrer" class="v-primary-link">
+              <span>Read Reflection on LinkedIn</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 5: ENGINEERING JOURNAL / LINKEDIN WRITING VAULT -->
     <section id="writing" class="section">
       <div class="section-header">
-        <div class="section-tag">04 · THOUGHT LEADERSHIP & JOURNAL</div>
+        <div class="section-tag">05 · THOUGHT LEADERSHIP & JOURNAL</div>
         <h2 class="section-title">The Engineering Journal</h2>
         <p class="section-subtitle">
           Selected technical publications, real-world post-mortems, and engineering principles from my LinkedIn archive. Every article links directly to the original verified publication.
@@ -554,10 +781,10 @@
       </div>
     </section>
 
-    <!-- SECTION 5: CAREER TIMELINE & EDUCATION -->
+    <!-- SECTION 6: CAREER TIMELINE & EDUCATION -->
     <section id="experience" class="section">
       <div class="section-header">
-        <div class="section-tag">05 · VERIFIED TRAJECTORY</div>
+        <div class="section-tag">06 · VERIFIED TRAJECTORY</div>
         <h2 class="section-title">Career Experience & Academic Honors</h2>
         <p class="section-subtitle">
           Proven production contributions across forward-deployed AI engineering, enterprise cloud EHR systems, and top academic honors.
@@ -634,11 +861,11 @@
       </div>
     </section>
 
-    <!-- SECTION 6: GET IN TOUCH / CONTACT -->
+    <!-- SECTION 7: GET IN TOUCH / CONTACT -->
     <section id="contact" class="section">
       <div class="contact-box">
         <div class="contact-left">
-          <div class="section-tag">06 · DIRECT CONTACT</div>
+          <div class="section-tag">07 · DIRECT CONTACT</div>
           <h2 class="contact-title">Let's Build Something Dependable</h2>
           <p class="contact-lead">
             I am always interested in discussing complex backend systems, cloud-native microservices, healthcare interoperability, and production AI engineering.
