@@ -4,6 +4,38 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Theme Management (Dark & Light Mode)
+  const themeToggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+
+  const savedTheme = localStorage.getItem('rd_portfolio_theme');
+  const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  let activeTheme = savedTheme || (prefersLight ? 'light' : 'dark');
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('rd_portfolio_theme', theme);
+    activeTheme = theme;
+
+    if (themeToggle) {
+      themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+      themeToggle.setAttribute('title', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);
+    }
+
+    if (window.mermaid && typeof activeCaseKey !== 'undefined') {
+      renderCaseStudy(activeCaseKey);
+    }
+  }
+
+  applyTheme(activeTheme);
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = activeTheme === 'dark' ? 'light' : 'dark';
+      applyTheme(nextTheme);
+    });
+  }
+
   // 1. Dynamic Footer Year
   const yearEl = document.getElementById('currentYear');
   if (yearEl) {
@@ -240,7 +272,10 @@ I --> J`,
   };
 
   // Render Studio Function
+  let activeCaseKey = 'fhir';
+
   function renderCaseStudy(key) {
+    activeCaseKey = key;
     const study = caseStudiesData[key];
     const panel = document.getElementById('caseDisplayPanel');
     if (!study || !panel) return;
@@ -297,17 +332,26 @@ I --> J`,
       btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
     });
 
-    // Re-run Mermaid rendering
+    // Re-run Mermaid rendering with theme adaptation
     if (window.mermaid) {
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
       mermaid.initialize({
         startOnLoad: false,
-        theme: 'dark',
+        theme: isLight ? 'default' : 'dark',
         securityLevel: 'strict',
-        themeVariables: {
+        themeVariables: isLight ? {
+          primaryColor: '#e0e7ff',
+          primaryTextColor: '#0f172a',
+          primaryBorderColor: '#4f46e5',
+          lineColor: '#0284c7',
+          secondaryColor: '#f8fafc',
+          tertiaryColor: '#ffffff',
+          fontFamily: 'Plus Jakarta Sans'
+        } : {
           primaryColor: '#172033',
           primaryTextColor: '#f1f5f9',
           primaryBorderColor: '#6366f1',
-          lineColor: '#06b6d4',
+          lineColor: '#0ea5e9',
           secondaryColor: '#111827',
           tertiaryColor: '#1a2234',
           fontFamily: 'Plus Jakarta Sans'

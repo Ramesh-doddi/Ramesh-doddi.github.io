@@ -29,7 +29,7 @@ Please analyze this entire archive and transform it into a world-class, premium 
 - **Email:** [ramesh.r.doddi@gmail.com](mailto:ramesh.r.doddi@gmail.com)
 - **Phone:** +91 8186985583
 - **Location:** Anakapalli, Andhra Pradesh, India (Open to Remote / Relocation)
-- **LinkedIn:** [https://www.linkedin.com/in/ramesh-doddi](https://www.linkedin.com/in/ramesh-doddi)
+- **LinkedIn:** [https://www.linkedin.com/in/ramesh-doddi-73084b2a7](https://www.linkedin.com/in/ramesh-doddi-73084b2a7)
 - **GitHub:** [https://github.com/Ramesh-doddi](https://github.com/Ramesh-doddi)
 - **Current Live Portfolio:** [https://ramesh-doddi.github.io/](https://ramesh-doddi.github.io/)
 

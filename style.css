@@ -1,54 +1,70 @@
 /* ==========================================================================
    RAMESH DODDI — PORTFOLIO DESIGN SYSTEM & STYLESHEET
-   Architectural Dark Aesthetics · Glassmorphism · Precision Typography
+   Architectural Engineering Aesthetics · Dual Theme (Dark / Light) · Precision Typography
    ========================================================================== */
 
-:root {
+:root, [data-theme="dark"] {
+  --theme-mode: 'dark';
+
   /* Surface Colors */
-  --bg-deep: #07090e;
-  --bg-main: #0b0f17;
-  --bg-card: rgba(16, 22, 34, 0.7);
-  --bg-card-hover: rgba(22, 31, 48, 0.85);
-  --bg-card-active: rgba(26, 38, 59, 0.95);
-  --bg-panel: rgba(14, 19, 30, 0.85);
+  --bg-deep: #0b0f17;
+  --bg-main: #0f1420;
+  --bg-card: #151c2c;
+  --bg-card-hover: #1c253b;
+  --bg-card-active: #222e47;
+  --bg-panel: #131927;
+  --nav-bg: rgba(11, 15, 23, 0.88);
   
   /* Borders & Dividers */
-  --border-subtle: rgba(255, 255, 255, 0.07);
-  --border-medium: rgba(255, 255, 255, 0.12);
-  --border-highlight: rgba(99, 102, 241, 0.4);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-highlight: rgba(99, 102, 241, 0.45);
   --border-mint: rgba(16, 185, 129, 0.35);
 
   /* Typography Colors */
   --text-pure: #ffffff;
-  --text-main: #f1f5f9;
+  --text-main: #e2e8f0;
   --text-secondary: #94a3b8;
   --text-dim: #64748b;
 
   /* Accent Color Palette */
   --accent-indigo: #6366f1;
-  --accent-cyan: #06b6d4;
+  --accent-cyan: #0ea5e9;
   --accent-mint: #10b981;
   --accent-emerald: #34d399;
   --accent-amber: #f59e0b;
   --accent-violet: #8b5cf6;
 
   /* Gradients */
-  --grad-primary: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
-  --grad-mint: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  --grad-primary: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%);
+  --grad-mint: linear-gradient(135deg, #10b981 0%, #0ea5e9 100%);
   --grad-violet: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
-  --grad-card: linear-gradient(145deg, rgba(20, 27, 43, 0.75), rgba(12, 16, 26, 0.75));
+  --grad-card: linear-gradient(145deg, #151c2c 0%, #111724 100%);
+
+  /* Interactive Elements */
+  --badge-bg: rgba(255, 255, 255, 0.05);
+  --badge-border: rgba(255, 255, 255, 0.1);
+  --chip-bg: rgba(255, 255, 255, 0.05);
+  --chip-hover: rgba(255, 255, 255, 0.1);
+  --code-bg: #090c12;
+  --input-bg: #111724;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --grid-dot: rgba(255, 255, 255, 0.15);
+  --grid-opacity: 0.55;
+  --term-bg: #090c12;
+  --term-header-bg: rgba(11, 15, 23, 0.9);
 
   /* Radii */
   --radius-xs: 6px;
   --radius-sm: 10px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
   --radius-full: 9999px;
 
   /* Typography */
   --font-main: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'DM Mono', monospace;
-  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
 
   /* Transitions */
   --trans-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
@@ -56,6 +72,58 @@
 
   /* Layout */
   --max-width: 1200px;
+}
+
+[data-theme="light"] {
+  --theme-mode: 'light';
+
+  /* Surface Colors */
+  --bg-deep: #f8fafc;
+  --bg-main: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-card-active: #e2e8f0;
+  --bg-panel: #f8fafc;
+  --nav-bg: rgba(248, 250, 252, 0.92);
+
+  /* Borders & Dividers */
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.14);
+  --border-highlight: rgba(79, 70, 229, 0.45);
+  --border-mint: rgba(5, 150, 105, 0.35);
+
+  /* Typography Colors */
+  --text-pure: #0f172a;
+  --text-main: #1e293b;
+  --text-secondary: #475569;
+  --text-dim: #64748b;
+
+  /* Accent Color Palette */
+  --accent-indigo: #4f46e5;
+  --accent-cyan: #0284c7;
+  --accent-mint: #059669;
+  --accent-emerald: #10b981;
+  --accent-amber: #d97706;
+  --accent-violet: #7c3aed;
+
+  /* Gradients */
+  --grad-primary: linear-gradient(135deg, #4f46e5 0%, #0284c7 100%);
+  --grad-mint: linear-gradient(135deg, #059669 0%, #0284c7 100%);
+  --grad-violet: linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%);
+  --grad-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+
+  /* Interactive Elements */
+  --badge-bg: rgba(15, 23, 42, 0.05);
+  --badge-border: rgba(15, 23, 42, 0.1);
+  --chip-bg: rgba(15, 23, 42, 0.04);
+  --chip-hover: rgba(15, 23, 42, 0.08);
+  --code-bg: #f1f5f9;
+  --input-bg: #ffffff;
+  --card-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04);
+  --grid-dot: rgba(0, 0, 0, 0.12);
+  --grid-opacity: 0.65;
+  --term-bg: #0f172a;
+  --term-header-bg: #1e293b;
 }
 
 /* Base Reset */
@@ -78,9 +146,16 @@ body {
   position: relative;
   min-height: 100vh;
   overflow-x: hidden;
-  background: radial-gradient(circle at 80% -10%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
-              radial-gradient(circle at 20% 40%, rgba(6, 182, 212, 0.08) 0%, transparent 45%),
-              var(--bg-deep);
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  transition: background-color var(--trans-smooth), color var(--trans-smooth);
+}
+
+.scroll-anchor {
+  display: block;
+  position: relative;
+  top: -85px;
+  visibility: hidden;
 }
 
 a {
@@ -96,40 +171,18 @@ button {
 }
 
 /* -------------------------------------------------------------
-   Ambient Glow Orbs
+   Authentic Technical Grid Background
 -------------------------------------------------------------- */
-.ambient-glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(140px);
+.technical-grid-bg {
+  position: fixed;
+  inset: 0;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.2;
-}
-
-.orb-indigo {
-  width: 550px;
-  height: 550px;
-  background: var(--accent-indigo);
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.orb-cyan {
-  width: 500px;
-  height: 500px;
-  background: var(--accent-cyan);
-  top: 900px;
-  right: -100px;
-}
-
-.orb-violet {
-  width: 450px;
-  height: 450px;
-  background: var(--accent-violet);
-  top: 2200px;
-  left: -80px;
+  background-image: radial-gradient(circle, var(--grid-dot) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: var(--grid-opacity);
+  mask-image: radial-gradient(ellipse at 50% 25%, black 40%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 25%, black 40%, transparent 80%);
 }
 
 /* -------------------------------------------------------------
@@ -139,7 +192,7 @@ button {
   position: sticky;
   top: 0;
   width: 100%;
-  background: rgba(7, 9, 14, 0.82);
+  background: var(--nav-bg);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border-subtle);
@@ -206,6 +259,48 @@ button {
   text-shadow: 0 0 8px rgba(16, 185, 129, 0.5);
 }
 
+
+.nav-actions-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--badge-bg);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--trans-fast);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--text-pure);
+  border-color: var(--border-highlight);
+  background: var(--chip-hover);
+}
+
+[data-theme="light"] .theme-toggle .sun-icon {
+  display: none;
+}
+[data-theme="light"] .theme-toggle .moon-icon {
+  display: block;
+}
+:root:not([data-theme="light"]) .theme-toggle .sun-icon,
+[data-theme="dark"] .theme-toggle .sun-icon {
+  display: block;
+}
+:root:not([data-theme="light"]) .theme-toggle .moon-icon,
+[data-theme="dark"] .theme-toggle .moon-icon {
+  display: none;
+}
+
 .nav-menu {
   display: flex;
   align-items: center;
@@ -233,12 +328,12 @@ button {
 
 .nav-resume {
   color: var(--text-pure);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--badge-bg);
   border: 1px solid var(--border-medium);
 }
 .nav-resume:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: var(--chip-hover);
+  border-color: var(--border-highlight);
 }
 
 .nav-cta {
@@ -416,27 +511,27 @@ main {
 }
 
 .btn-glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--badge-bg);
   border: 1px solid var(--border-medium);
   color: var(--text-main);
 }
 .btn-glass:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.25);
+  background: var(--chip-hover);
+  border-color: var(--border-highlight);
   transform: translateY(-2px);
 }
 
 .btn-icon {
   padding: 0.75rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--badge-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   color: var(--text-secondary);
 }
 .btn-icon:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--chip-hover);
   color: var(--text-pure);
-  border-color: var(--border-medium);
+  border-color: var(--border-highlight);
   transform: translateY(-2px);
 }
 
@@ -449,7 +544,7 @@ main {
 .tech-badge {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--badge-bg);
   border: 1px solid var(--border-subtle);
   padding: 0.3rem 0.65rem;
   border-radius: var(--radius-xs);
@@ -458,7 +553,7 @@ main {
 
 /* Hero Terminal Card */
 .interactive-terminal {
-  background: var(--grad-card);
+  background: var(--term-bg);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
@@ -470,7 +565,7 @@ main {
   align-items: center;
   justify-content: space-between;
   padding: 0.85rem 1.25rem;
-  background: rgba(10, 14, 23, 0.8);
+  background: var(--term-header-bg);
   border-bottom: 1px solid var(--border-subtle);
 }
 
@@ -564,6 +659,7 @@ main {
 
 .pillar-card {
   background: var(--bg-card);
+  box-shadow: var(--card-shadow);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 2rem;
@@ -682,7 +778,7 @@ main {
 
 /* Studio Display Panel */
 .case-display-panel {
-  background: var(--grad-card);
+  background: var(--bg-card);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-md);
   padding: 2.5rem;
@@ -725,11 +821,11 @@ main {
 .c-chip {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--badge-bg);
   border: 1px solid var(--border-subtle);
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-full);
-  color: #cbd5e1;
+  color: var(--text-secondary);
 }
 
 .c-case-grid {
@@ -770,7 +866,7 @@ main {
 
 /* Interactive Diagram Box */
 .c-diagram-container {
-  background: rgba(10, 13, 20, 0.9);
+  background: var(--code-bg);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
   padding: 1.5rem;
@@ -865,7 +961,7 @@ main {
 
 .pill {
   font-size: 0.82rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--chip-bg);
   border: 1px solid var(--border-subtle);
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-xs);
@@ -875,8 +971,8 @@ main {
 
 .pill:hover {
   border-color: var(--border-medium);
-  color: var(--text-main);
-  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-pure);
+  background: var(--chip-hover);
 }
 
 .pill-primary {
@@ -926,7 +1022,7 @@ main {
 .vault-search-box input {
   width: 100%;
   padding: 0.95rem 1.2rem 0.95rem 3.1rem;
-  background: rgba(14, 20, 32, 0.85);
+  background: var(--input-bg);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-sm);
   color: var(--text-pure);
@@ -956,13 +1052,13 @@ main {
   padding: 0.45rem 1rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-subtle);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--chip-bg);
   color: var(--text-secondary);
   transition: var(--trans-smooth);
 }
 
 .v-filter-btn:hover {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--chip-hover);
   color: var(--text-pure);
 }
 
@@ -981,6 +1077,7 @@ main {
 
 .vault-card {
   background: var(--bg-card);
+  box-shadow: var(--card-shadow);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 2rem;
@@ -1065,7 +1162,7 @@ main {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 600;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--chip-bg);
   border: 1px solid var(--border-subtle);
   padding: 0.3rem 0.65rem;
   border-radius: var(--radius-xs);
@@ -1074,9 +1171,9 @@ main {
 }
 
 .v-pill:hover {
-  background: rgba(99, 102, 241, 0.15);
+  background: var(--chip-hover);
   border-color: var(--accent-indigo);
-  color: #fff;
+  color: var(--text-pure);
   transform: translateY(-1px);
 }
 
@@ -1135,13 +1232,13 @@ main {
   padding: 0.55rem 1.1rem;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-subtle);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--chip-bg);
   color: var(--text-secondary);
   transition: var(--trans-smooth);
 }
 
 .filter-btn:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--chip-hover);
   color: var(--text-main);
 }
 
@@ -1159,6 +1256,7 @@ main {
 
 .journal-card {
   background: var(--bg-card);
+  box-shadow: var(--card-shadow);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 1.75rem;
@@ -1225,7 +1323,7 @@ main {
 }
 
 .j-link:hover {
-  color: #fff;
+  color: var(--accent-mint);
   transform: translateX(3px);
 }
 
@@ -1266,6 +1364,7 @@ main {
 
 .t-card {
   background: var(--bg-card);
+  box-shadow: var(--card-shadow);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 2rem;
@@ -1349,7 +1448,7 @@ main {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--chip-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xs);
   padding: 0.6rem 0.85rem;
@@ -1364,7 +1463,7 @@ main {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 3.5rem;
-  background: linear-gradient(145deg, rgba(20, 27, 43, 0.85), rgba(12, 16, 26, 0.85));
+  background: var(--bg-card);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   padding: 3.5rem;
@@ -1404,7 +1503,7 @@ main {
   width: 38px;
   height: 38px;
   border-radius: var(--radius-xs);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--badge-bg);
   display: grid;
   place-items: center;
 }
@@ -1428,7 +1527,7 @@ main {
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.3rem 0.65rem;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--badge-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-xs);
   color: var(--text-secondary);
@@ -1452,16 +1551,16 @@ main {
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.55rem 1rem;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--chip-bg);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   color: var(--text-secondary);
   transition: var(--trans-smooth);
 }
 .social-chip:hover {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  border-color: var(--border-medium);
+  background: var(--chip-hover);
+  color: var(--text-pure);
+  border-color: var(--border-highlight);
 }
 
 /* Contact Form */
@@ -1494,7 +1593,7 @@ main {
 
 .form-group input,
 .form-group textarea {
-  background: rgba(7, 10, 16, 0.75);
+  background: var(--input-bg);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-xs);
   padding: 0.75rem 1rem;
