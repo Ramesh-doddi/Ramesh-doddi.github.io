@@ -1,212 +1,728 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101318">
-<meta name="description" content="Ramesh Doddi — Software Engineer building cloud-native healthcare systems, resilient AI workflows, and time-series intelligence.">
-<title>Ramesh Doddi — Software Engineer & Systems Builder</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<style>
-:root{--bg:#101318;--panel:#171b22;--panel2:#1c222b;--line:#2a313d;--text:#eef2f7;--muted:#9ba7b7;--mint:#9bf5c8;--blue:#91baff;--violet:#c4adff;--amber:#ffd28a;--radius:18px;--max:1160px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 78% -8%,#1b2a35 0,transparent 35%),var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer} .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:#101318e8;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff10}
-.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font:800 15px Manrope,sans-serif;letter-spacing:-.04em}.brand span{color:var(--mint)}nav{display:flex;gap:22px;align-items:center}nav a{font-size:12px;color:var(--muted)}nav a:hover{color:var(--mint)}.nav-cta{padding:9px 13px;border:1px solid #53615e;border-radius:9px;color:var(--mint)}
-.hero{padding:82px 0 60px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}.eyebrow{font:500 11px "DM Mono",monospace;text-transform:uppercase;letter-spacing:.16em;color:var(--mint);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";width:24px;height:1px;background:var(--mint)}h1,h2,h3,p{margin-top:0}h1{font:800 clamp(42px,6vw,72px)/1.02 Manrope,sans-serif;letter-spacing:-.065em;margin:20px 0 22px;max-width:720px}h1 em{font-style:normal;color:var(--mint)}.lead{font-size:17px;color:#bac4d1;max-width:660px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 24px}.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 16px;border-radius:10px;border:1px solid var(--line);font-weight:700;font-size:13px}.btn.primary{background:var(--mint);color:#102019;border-color:var(--mint)}.btn:hover{transform:translateY(-1px)}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{font:11px "DM Mono",monospace;padding:7px 9px;border:1px solid var(--line);border-radius:7px;color:#c1cbd7;background:#ffffff03}
-.hero-card{padding:22px;border:1px solid #39434f;background:linear-gradient(145deg,#1a2229,#15191f);border-radius:22px;box-shadow:0 22px 60px #0003}.terminal-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:15px;margin-bottom:18px;font:11px "DM Mono",monospace;color:var(--muted)}.dots{display:flex;gap:5px}.dots i{width:7px;height:7px;background:#586371;border-radius:50%}.status{color:var(--mint)}.code-line{display:flex;gap:14px;font:12px/2 "DM Mono",monospace;color:#c6d0dd}.ln{color:#647282;min-width:16px}.code-line .key{color:var(--blue)}.code-line .val{color:var(--mint)}.code-line .comment{color:#788493}.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.stat{border-top:1px solid var(--line);padding-top:12px}.stat strong{display:block;font:700 19px Manrope,sans-serif}.stat span{font-size:10px;color:var(--muted)}
-section{padding:62px 0;border-top:1px solid #ffffff0b}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:26px}.kicker{font:11px "DM Mono",monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--mint)}h2{font:750 clamp(27px,3vw,39px)/1.12 Manrope,sans-serif;letter-spacing:-.045em;margin:9px 0}.section-head p{color:var(--muted);max-width:440px;font-size:13px;margin-bottom:3px}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pillar{padding:20px;border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);min-height:165px;transition:.2s}.pillar:hover,.case:hover{border-color:#536b67;transform:translateY(-2px)}.iconbox{width:35px;height:35px;border:1px solid #3b4b49;border-radius:10px;display:grid;place-items:center;color:var(--mint);font-size:16px;margin-bottom:15px}.pillar h3{font:700 15px Manrope,sans-serif;margin-bottom:7px}.pillar p{color:var(--muted);font-size:12px;margin:0}
-.case-layout{display:grid;grid-template-columns:270px 1fr;gap:18px;align-items:start}.case-tabs{display:flex;flex-direction:column;gap:7px;position:sticky;top:90px}.case-tab{background:transparent;border:1px solid transparent;border-radius:10px;text-align:left;padding:13px;color:var(--muted);display:flex;gap:12px;align-items:center;font-size:12px}.case-tab b{font:11px "DM Mono",monospace;color:#657181}.case-tab.active{background:var(--panel);border-color:var(--line);color:var(--text)}.case-tab.active b{color:var(--mint)}.case-panel{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(160deg,#1a2028,#14181e);padding:26px;min-height:560px}.case-panel h3{font:750 26px/1.15 Manrope,sans-serif;letter-spacing:-.04em;margin:10px 0}.case-panel .summary{font-size:14px;color:#c0cad6;max-width:750px}.meta{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0 22px}.meta span{font:10px "DM Mono",monospace;color:#b9c6d2;padding:6px 8px;border:1px solid #303a45;border-radius:6px}.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:22px 0}.case-grid h4,.diagram-head{font:700 12px Manrope,sans-serif;margin:0 0 8px;color:var(--mint)}.case-grid p,.case-grid li{font-size:12px;color:#b6c0cc}.case-grid ul{padding-left:17px;margin:7px 0}.diagram{background:#10151b;border:1px solid #303945;border-radius:13px;padding:14px;margin-top:18px;overflow:auto}.diagram-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.diagram .mermaid{min-width:460px;display:flex;justify-content:center}.diagram-note{font-size:10px;color:#7f8c9a;margin-top:10px}.source-link{display:inline-flex;gap:7px;align-items:center;color:var(--mint);font-size:12px;font-weight:700;margin-top:10px}
-.blog-filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{padding:8px 11px;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--muted);font-size:11px}.filter.active{background:#22352e;color:var(--mint);border-color:#466457}.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.blog-card{display:flex;flex-direction:column;padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);min-height:200px}.blog-card .category{font:10px "DM Mono",monospace;color:var(--blue);text-transform:uppercase;letter-spacing:.08em}.blog-card h3{font:700 16px/1.3 Manrope,sans-serif;margin:13px 0 9px}.blog-card p{font-size:12px;color:var(--muted);margin-bottom:20px}.blog-card a{margin-top:auto;color:var(--mint);font-size:12px;font-weight:700}.hidden{display:none!important}
-.resume-box{display:grid;grid-template-columns:.65fr 1.35fr;gap:30px}.resume-aside{padding:22px;background:#19251f;border:1px solid #334d41;border-radius:var(--radius);align-self:start}.resume-aside h3{font:700 20px Manrope,sans-serif}.resume-aside p{font-size:12px;color:#b5c9bd}.resume-aside .note{font-size:10px;color:#93a69a;border-top:1px solid #334d41;padding-top:12px;margin-top:15px}.bullets{list-style:none;padding:0;margin:0}.bullets li{padding:0 0 17px 22px;margin-bottom:17px;border-bottom:1px solid var(--line);position:relative;color:#d3dbe4;font-size:13px}.bullets li:before{content:"↗";position:absolute;left:0;color:var(--mint)}.bullets strong{color:#fff}.timeline{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}.timeline-card{border:1px solid var(--line);border-radius:14px;padding:17px;background:var(--panel)}.timeline-card small{font:10px "DM Mono",monospace;color:var(--mint)}.timeline-card h3{font:700 15px Manrope,sans-serif;margin:8px 0 4px}.timeline-card p{font-size:12px;color:var(--muted);margin:0}
-.contact{padding:36px;border:1px solid #3b5549;background:linear-gradient(120deg,#1b2923,#171d24);border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.contact h2{margin-bottom:7px}.contact p{margin:0;color:var(--muted);font-size:13px}footer{padding:26px 0 35px;color:#768391;font-size:11px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-@media(max-width:850px){nav{gap:12px}nav a:not(.nav-cta){display:none}.hero{grid-template-columns:1fr;padding-top:54px;gap:28px}.hero-card{max-width:540px}.pillars{grid-template-columns:repeat(2,1fr)}.case-layout{grid-template-columns:1fr}.case-tabs{position:static;display:grid;grid-template-columns:repeat(2,1fr)}.case-tab{font-size:11px;padding:10px}.blog-grid{grid-template-columns:repeat(2,1fr)}.resume-box{grid-template-columns:1fr}.case-panel{min-height:0}}
-@media(max-width:540px){.wrap{width:min(100% - 28px,var(--max))}.pillars,.blog-grid,.timeline{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:12px}.case-panel{padding:18px}.case-grid{grid-template-columns:1fr}.case-tabs{grid-template-columns:1fr 1fr}.case-tab{gap:7px}.contact{padding:22px;display:block}.contact .btn{margin-top:18px}.hero-stats{grid-template-columns:repeat(3,1fr)}.stat strong{font-size:16px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0d14">
+  <meta name="description" content="Ramesh Doddi — Software Engineer specializing in C#, .NET 8, Microsoft Azure, FHIR Healthcare Interoperability, Generative AI, and Time-Series Intelligence.">
+  <title>Ramesh Doddi | Senior Software Engineer & Systems Architect</title>
+  
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Mermaid for Live System Architecture Diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top">RAMESH<span>.</span> DODDI</a><nav><a href="#work">Case studies</a><a href="#writing">Writing</a><a href="#resume">Resume</a><a class="nav-cta" href="#contact">Let's connect ↗</a></nav></div></header>
-<main id="top" class="wrap">
-<section class="hero" style="border-top:0">
-<div><div class="eyebrow">Software Engineer · Systems Builder</div>
-<h1>Engineering systems that are <em>secure, resilient,</em> and useful.</h1>
-<p class="lead">I build cloud-native healthcare platforms, interoperable APIs, production AI workflows, and time-series intelligence—with a focus on the architecture that makes them dependable.</p>
-<div class="actions"><a class="btn primary" href="#work">Explore the work ↓</a><a class="btn" href="resume.pdf" target="_blank" rel="noreferrer">Download Resume (PDF) ↗</a><a class="btn" href="https://github.com/Ramesh-doddi" target="_blank" rel="noreferrer">GitHub ↗</a><a class="btn" href="https://www.linkedin.com/in/ramesh-doddi" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
-<div class="chips"><span class="chip">C# / .NET 8</span><span class="chip">Azure</span><span class="chip">FHIR R4</span><span class="chip">Semantic Kernel</span><span class="chip">Time-series ML</span></div></div>
-<div class="hero-card"><div class="terminal-top"><span>ramesh / engineering-focus</span><span class="dots"><i></i><i></i><i></i></span></div>
-<div class="code-line"><span class="ln">01</span><span><span class="key">focus</span>: <span class="val">"reliable systems"</span></span></div>
-<div class="code-line"><span class="ln">02</span><span><span class="key">domains</span>: ["healthcare", "AI", "data"]</span></div>
-<div class="code-line"><span class="ln">03</span><span><span class="key">design</span>: ["secure", "modular", "observable"]</span></div>
-<div class="code-line"><span class="ln">04</span><span><span class="key">default</span>: <span class="val">"measure before claiming"</span></span></div>
-<div class="code-line"><span class="ln">05</span><span class="comment">// Architecture is a product feature.</span></div>
-<div class="hero-stats"><div class="stat"><strong>6</strong><span>Flagship case studies</span></div><div class="stat"><strong>2</strong><span>Industry environments</span></div><div class="stat"><strong>FHIR</strong><span>Interoperability</span></div></div></div>
-</section>
-<section id="strengths"><div class="section-head"><div><div class="kicker">01 / Engineering pillars</div><h2>Where I build depth.</h2></div><p>From healthcare interoperability to production AI, the common thread is designing for real constraints—not just the happy path.</p></div>
-<div class="pillars">
-<div class="pillar"><div class="iconbox">⇄</div><h3>Healthcare interoperability</h3><p>FHIR R4 mapping, provider adapters, EHR integrations, and multi-protocol workflows.</p></div>
-<div class="pillar"><div class="iconbox">◈</div><h3>Cloud-native backend</h3><p>.NET 8 services, Azure API Management, tenant-aware data access, and clean architecture.</p></div>
-<div class="pillar"><div class="iconbox">⌁</div><h3>Resilient generative AI</h3><p>Semantic Kernel, Azure OpenAI, retries, multi-region failover, and deferred processing.</p></div>
-<div class="pillar"><div class="iconbox">▦</div><h3>Data isolation & security</h3><p>Managed identities, Key Vault, tenant isolation, auditability, and PHI-conscious logging.</p></div>
-<div class="pillar"><div class="iconbox">∿</div><h3>Time-series intelligence</h3><p>AutoETS forecasting and conformal prediction intervals for multi-cadence KPI anomalies.</p></div>
-<div class="pillar"><div class="iconbox">⌘</div><h3>AI-assisted engineering</h3><p>Reusable Claude workflows, GitHub CLI automation, and parallel work with Git worktrees.</p></div>
-</div></section>
-<section id="work"><div class="section-head"><div><div class="kicker">02 / Selected systems</div><h2>Architecture, with the trade-offs exposed.</h2></div><p>Choose a system to inspect its problem, design decisions, security boundary, and source post. Diagrams are conceptual reconstructions from the archive.</p></div>
-<div class="case-layout"><div class="case-tabs" role="tablist" aria-label="Case studies">
-<button class="case-tab active" data-case="fhir"><b>01</b> Generic FHIR Gateway</button>
-<button class="case-tab" data-case="erx"><b>02</b> Ensora eRx Integration</button>
-<button class="case-tab" data-case="vault"><b>03</b> Azure Key Vault Pattern</button>
-<button class="case-tab" data-case="shard"><b>04</b> Multi-tenant Sharding</button>
-<button class="case-tab" data-case="scribe"><b>05</b> AI Clinical Scribe</button>
-<button class="case-tab" data-case="anomaly"><b>06</b> Time-series Anomaly Engine</button>
-</div><article class="case-panel" id="casePanel" aria-live="polite"></article></div>
-</section>
-<section id="writing"><div class="section-head"><div><div class="kicker">03 / Engineering journal</div><h2>Ideas from the field.</h2></div><p>A curated entry point into the LinkedIn archive. Each link opens the original post; summaries here are editorial introductions, not replacements for the source.</p></div>
-<div class="blog-filters" role="group" aria-label="Filter writing"><button class="filter active" data-filter="all">All insights</button><button class="filter" data-filter="health">Healthcare</button><button class="filter" data-filter="cloud">Cloud & reliability</button><button class="filter" data-filter="ai">Applied AI</button><button class="filter" data-filter="craft">Engineering craft</button><button class="filter" data-filter="thinking">Thinking</button></div>
-<div class="blog-grid" id="blogGrid">
-<article class="blog-card" data-category="health"><span class="category">Healthcare · Architecture</span><h3>Designing a provider-pluggable FHIR gateway</h3><p>Factory and Strategy patterns, a generic execution engine, FHIR R4 mapping, APIM onboarding, mTLS, and RBAC.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486656983580864512" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="health"><span class="category">Healthcare · Integration</span><h3>Making REST, XML, HTML POST, and SOAP feel like one workflow</h3><p>How an e-prescribing journey coordinates authentication, NCScript payloads, an external UI, and medication reconciliation.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486650859599134721" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="cloud"><span class="category">Cloud · Security</span><h3>Make the secure path the easy path</h3><p>A reusable Key Vault pattern with Managed Identity and environment-aware secret loading across .NET services.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486648787600433152" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="ai"><span class="category">AI · Resilience</span><h3>AI reliability begins where the happy path ends</h3><p>Multi-region Azure OpenAI failover, Polly retries with backoff and jitter, warm-up, and safe streaming behavior.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486595395817697280" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="health"><span class="category">Healthcare · Applied AI</span><h3>Clinical AI that supports the workflow instead of interrupting it</h3><p>Clinical Scribe workflows, SSE progress, prompt caching, deferred processing, and guardrails around structured notes.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486500532904374272" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="health"><span class="category">Healthcare · Safety</span><h3>Clinical decision support without alert fatigue</h3><p>Context hashing, repeat-alert suppression, concurrency controls, cooldown logic, and non-blocking AI execution.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486597703855091712" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="cloud"><span class="category">Cloud · Performance</span><h3>Fix repeated work before optimizing the work</h3><p>A .NET 8 Blazor migration story involving request-scoped memoization, L1 caching, and hydration behavior.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486626117244837889" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="health"><span class="category">Healthcare · Privacy</span><h3>HIPAA-minded engineering is a set of design decisions</h3><p>Key Vault, tenant isolation, encryption, audit mechanisms, and keeping PHI out of application logs.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486503630288633856" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="health"><span class="category">Developer experience</span><h3>Documentation as an integration product</h3><p>Centralized configuration, interactive specifications, onboarding guides, code samples, and Azure AD SSO.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486498277215965184" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="thinking"><span class="category">Engineering craft</span><h3>We break software to understand it</h3><p>Why reproducing failure, testing unusual inputs, and finding root causes are essential parts of debugging.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7475269084629196801" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="thinking"><span class="category">AI · Human factors</span><h3>When creation gets faster, understanding becomes the bottleneck</h3><p>A reflection on the human review, comprehension, and decision-making that still surrounds AI-generated work.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7480294759631065089" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-<article class="blog-card" data-category="craft"><span class="category">Frontend · Architecture</span><h3>Choosing a Blazor render mode is a systems decision</h3><p>Trade-offs among Server, WebAssembly, and Interactive Auto across responsiveness, server resources, and startup experience.</p><a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486601146766372864" target="_blank" rel="noreferrer">Read original post ↗</a></article>
-</div></section>
-<section id="resume"><div class="section-head"><div><div class="kicker">04 / Resume highlights</div><h2>Impact, without invented numbers.</h2></div><p>The supplied resume and archive describe the work but do not provide measured latency, cost, uptime, or volume deltas. These bullets emphasize verifiable scope and technical outcomes without manufacturing metrics.</p></div>
-<div class="resume-box"><aside class="resume-aside"><h3>Ramesh Doddi</h3><p>Software Engineer · Cloud-native backend · Healthcare AI</p><p><strong>Core stack</strong><br>C# · .NET 8 · Azure · FHIR R4 · Azure OpenAI · Semantic Kernel · Python · SQL</p><div style="display:flex;gap:12px;margin:12px 0;"><a class="source-link" href="resume.pdf" target="_blank" rel="noreferrer" style="font-weight:700;color:var(--mint)">Download Resume (PDF) ↗</a> · <a class="source-link" href="https://www.linkedin.com/in/ramesh-doddi" target="_blank" rel="noreferrer">LinkedIn ↗</a></div><div class="note">Portfolio language is grounded in the verified resume and LinkedIn archive.</div></aside>
-<div><ul class="bullets">
-<li><strong>Built a provider-pluggable FHIR R4 gateway</strong> in C#/.NET 8 and Azure using Factory/Strategy patterns, generic FHIR execution, mapping layers, token caching, and APIM onboarding with subscription keys, mTLS, and FHIR RBAC.</li>
-<li><strong>Integrated Ensora (NewCrop) e-prescribing</strong> across REST authentication, NCScript XML generation, HTML Form-POST launch, SOAP medication-history retrieval, and local medication reconciliation with conflict handling.</li>
-<li><strong>Standardized secrets across .NET microservices</strong> with Azure Key Vault, Managed Identities, and environment-aware loading—removing hardcoded credentials from application configuration.</li>
-<li><strong>Implemented organization-based database sharding</strong> with dynamic connection resolution and Entity Framework Core tenant configuration to support tenant-aware EHR data access.</li>
-<li><strong>Improved resilience of clinical AI workflows</strong> using Azure OpenAI, Cognitive Services, Semantic Kernel, multi-region failover, retry/fallback handling, deferred processing, and Azure Service Bus.</li>
-<li><strong>Designed a multi-model anomaly detection engine at DataDios</strong> combining AutoETS forecasts with conformal prediction intervals to identify point, contextual, and collective anomalies across daily, weekly, and monthly KPIs.</li>
-<li><strong>Automated AI-assisted engineering workflows</strong> with project-specific Claude skills, GitHub CLI operations, PR creation/reviews, and isolated parallel work using multiple Git worktrees.</li>
-</ul>
-<div class="timeline"><div class="timeline-card"><small>JAN 2025 — JUN 2026 · RESUME</small><h3>Praxzen · Teya Health</h3><p>Full-stack / software engineering on a cloud-based EHR platform, with backend, Azure, interoperability, and clinical AI responsibilities.</p></div><div class="timeline-card"><small>JUL 2026 — SEP 2026 · RESUME</small><h3>DataDios.ai</h3><p>Forward Deployed Engineer focused on time-series anomaly detection and AI-assisted development workflows.</p></div></div></div></div>
-</section>
-<section id="contact"><div class="contact"><div><div class="kicker">05 / Contact</div><h2>Building something complex?</h2><p>I'd be glad to talk about cloud-native backend systems, healthcare interoperability, or production AI.</p><p style="margin-top:6px;font-size:12px;color:var(--mint)">📍 Anakapalli, Andhra Pradesh, India · 📞 +91 8186985583</p></div><div class="actions" style="margin:0"><a class="btn primary" href="mailto:ramesh.r.doddi@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/ramesh-doddi" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="btn" href="https://github.com/Ramesh-doddi" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></section>
-<footer><span>© <span id="year"></span> Ramesh Doddi · Built around systems thinking.</span><span>Conceptual architecture diagrams · No confidential implementation details</span></footer>
-</main>
-<script>
-const cases = {
-fhir:{num:"CASE STUDY 01",title:"Generic FHIR Interoperability Gateway",summary:"A provider-pluggable .NET 8 backend designed to connect internal healthcare applications with Azure FHIR Service and external EHR platforms such as Epic and Cerner—without rewriting the execution path for every provider.",tags:["C# / .NET 8","Azure API Management","HL7 FHIR R4","Factory + Strategy","mTLS · RBAC"],
-problem:"Healthcare integrations often differ at the provider boundary. Duplicating workflows for each EHR increases maintenance and makes security onboarding harder to standardize.",
-design:["Provider drivers selected through Factory and Strategy patterns.","Generic FHIR execution engine with dedicated internal-model ↔ FHIR R4 mapping layers.","APIM provisioning for tenant resources, subscription keys, and mTLS certificate onboarding.","Bearer-token caching with background refresh to reduce repeated authentication work."],
-security:"Layered access controls combine subscription keys, mutual TLS, and fine-grained FHIR RBAC. Keep internal business models separate from external resource representations; treat tokens and PHI as sensitive data.",
-impact:"The archive describes easier provider extensibility and reduced authentication overhead as intended outcomes. No measured latency, throughput, or onboarding-time figures were supplied.",
-diagram:`flowchart LR
-A[Internal healthcare apps] --> B[.NET 8 FHIR gateway]
-B --> C[Mapping layer]
-C --> D[Generic FHIR executor]
-D --> E[Provider strategy]
-E --> F[Azure FHIR Service]
-E --> G[Epic / Cerner adapters]
-H[Azure API Management] -. policies .-> B
-I[Token cache + refresh] -. auth .-> D
-J[Subscription key · mTLS · FHIR RBAC] -. guard .-> H`,
-url:"https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486656983580864512"},
-erx:{num:"CASE STUDY 02",title:"Ensora (NewCrop) eRx Integration",summary:"An end-to-end electronic prescribing workflow that coordinates REST, strict NCScript XML, browser form submission, SOAP history retrieval, and local medication reconciliation behind a single clinician experience.",tags:["REST + SOAP","NCScript XML","HTML Form-POST","Medication reconciliation","Catalog search"],
-problem:"A clinician expects one prescribing workflow, while the external prescribing service requires multiple protocols and carefully shaped clinical/provider context.",
-design:["Authenticate through JSON REST APIs and obtain access tokens.","Generate NCScript XML with demographics, DEA/NPI/state license, allergies, and active medications.","Launch the prescribing interface through an auto-submitting HTML Form-POST.","Retrieve medication history through SOAP after the external session.","Reconcile new, changed, and outdated prescriptions into local records; maintain drug/allergy catalogs for autocomplete."],
-security:"Prescription payloads contain sensitive patient and clinician data. Validate XML shape and required credentials, protect tokens, authorize access by patient/encounter context, and audit reconciliation outcomes. These are recommended controls; the archive does not specify every implemented control.",
-impact:"The source documents the integrated workflow and reconciliation behavior. It does not provide a measured reduction in prescribing time, error rate, or autocomplete latency.",
-diagram:`flowchart TD
-A[Clinician selects Prescribe] --> B[REST authentication]
-B --> C[Build NCScript XML]
-C --> D[HTML Form-POST to Ensora UI]
-D --> E[Prescribing session completes]
-E --> F[SOAP medication history]
-F --> G[Reconciliation engine]
-G --> H[Create / update / retire local medications]
-I[Drug + allergy catalogs] --> A`,
-url:"https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486650859599134721"},
-vault:{num:"CASE STUDY 03",title:"Zero-Trust Azure Key Vault Pattern",summary:"A reusable secret-access convention for .NET microservices that removes embedded credentials and makes secure configuration consistent across local development, QA, staging, and production.",tags:["Azure Key Vault","Managed Identity","Environment-aware config","Microservices","Secret hygiene"],
-problem:"As service count and environments grow, API keys, connection strings, and certificates become difficult to distribute safely without slowing down development.",
-design:["Standardize Key Vault integration across .NET services.","Use Azure Managed Identity rather than credentials embedded in applications.","Load environment-specific settings through an environment-aware pipeline.","Keep local development usable without weakening production defaults."],
-security:"Apply least-privilege vault permissions, separate environments and access scopes, rotate secrets, audit access, and never log secret values. The archive explicitly states Key Vault, Managed Identity, environment-aware loading, and removal of hardcoded secrets; the additional controls are deployment recommendations.",
-impact:"The documented outcome is a repeatable security pattern and fewer hardcoded secrets—not a quantified incident reduction. No numeric security or deployment metrics were supplied.",
-diagram:`flowchart TD
-A[.NET microservice] --> B[Managed Identity]
-B --> C[Azure identity platform]
-C --> D[Azure Key Vault]
-D --> E[Environment-scoped secrets]
-E --> F[Runtime configuration]
-G[Local / QA / Staging / Production] --> H[Environment-aware loading]
-H --> A
-I[Least privilege · audit · rotation] -. controls .-> D`,
-url:"https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486648787600433152"},
-shard:{num:"CASE STUDY 04",title:"Organization-Based Database Sharding",summary:"A tenant-aware data-access design for a cloud EHR, using organization-based shards, dynamic connection resolution, and Entity Framework Core configuration to isolate data across organizations.",tags:["Multi-tenancy","Entity Framework Core","Dynamic routing","Tenant isolation","Cloud EHR"],
-problem:"A growing multi-organization EHR needs a deliberate way to route each organization's reads and writes while preventing accidental cross-tenant access.",
-design:["Resolve tenant/organization context before opening the data context.","Map the tenant to its assigned database shard and connection configuration.","Configure EF Core with tenant-aware connection selection.","Keep tenant identity explicit across request handling and data-access boundaries."],
-security:"Fail closed if tenant resolution is missing or ambiguous; derive tenant context from trusted authorization, not a client-supplied database name; test cross-tenant access boundaries; avoid exposing connection strings in logs. The archive confirms organization-based sharding, dynamic resolution, EF Core configuration, and isolation, but not exact shard counts or migration mechanics.",
-impact:"The resume describes support for thousands of patient records, but supplies no shard count, tenant count, throughput, or before/after database performance figures.",
-diagram:`flowchart TD
-A[Authenticated request] --> B[Resolve organization]
-B --> C[Tenant-to-shard map]
-C --> D[Dynamic connection resolver]
-D --> E[EF Core tenant configuration]
-E --> F[(Organization shard A)]
-E --> G[(Organization shard B)]
-E --> H[(Organization shard N)]
-I[Authorization + isolation tests] -. guard .-> B`,
-url:"https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486503630288633856"},
-scribe:{num:"CASE STUDY 05",title:"AI Clinical Scribe with Semantic Kernel",summary:"An ambient clinical documentation workflow that turns doctor–patient conversation into structured notes, with streaming progress, asynchronous processing, and fallback paths for unreliable AI dependencies.",tags:["Azure OpenAI","Azure Cognitive Services","Semantic Kernel","SSE","Service Bus"],
-problem:"Speech-to-text is only one part of clinical scribing. Long-running inference, quota limits, transient failures, hallucination risk, and clinician workflow interruption all need architectural treatment.",
-design:["Use Azure Cognitive Services and Azure OpenAI within a Semantic Kernel workflow.","Stream progress to the client through Server-Sent Events (SSE).","Use prompt-caching strategies to reduce repeated token usage.","Defer long-running work and preserve processing through background pipelines and Azure Service Bus fallback.","Support multi-region model deployments and retry/fallback behavior."],
-security:"Treat audio and generated notes as sensitive health data; enforce authenticated access, encryption, access auditing, PHI-conscious logs, bounded retention, and clinician review before notes become authoritative. The archive references guardrails and patient safety but does not specify a complete compliance control matrix.",
-impact:"The described production focus is recoverability, responsive progress, and reducing the risk of lost recordings. No measured cost reduction, note-accuracy score, or clinician time savings were supplied.",
-diagram:`flowchart TD
-A[Doctor-patient conversation] --> B[Audio / speech processing]
-B --> C[Semantic Kernel orchestration]
-C --> D[Azure OpenAI]
-D --> E[Structured draft note]
-E --> F[Clinician review]
-F --> G[EHR documentation]
-C --> H[SSE progress updates]
-C --> I[Deferred processing]
-I --> J[Azure Service Bus]
-J --> K[Retry / resume processing]
-D -. quota / region failure .-> L[Fallback deployment]
-L --> D`,
-url:"https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486500532904374272"},
-anomaly:{num:"CASE STUDY 06",title:"Time-Series Anomaly Detection Engine",summary:"A multi-model anomaly detection engine at DataDios.ai that combines AutoETS forecasts with conformal prediction intervals to detect point, contextual, and collective anomalies across enterprise KPIs at daily, weekly, and monthly cadences.",tags:["Python","AutoETS","Conformal prediction","Multi-cadence KPIs","DataDios.ai"],
-problem:"A single threshold can miss seasonality, context, and sustained patterns. Enterprise metrics at different time horizons need a detection approach that compares observations with expected behavior.",
-design:["Ingest and validate KPI observations at the supported cadence.","Fit AutoETS to model the expected time-series behavior.","Construct conformal prediction intervals around forecasts.","Flag observations outside expected intervals and evaluate patterns for point, contextual, and collective anomalies.","Present findings with the relevant metric, time window, and expected range for investigation."],
-security:"The source describes the model design but not the full deployment topology. Recommended production controls include tenant-aware access, data validation, model/version tracking, monitoring for drift, and auditable alert explanations.",
-impact:"The resume confirms design and deployment of the engine and the three anomaly classes. No precision/recall, false-positive rate, detection latency, or benchmark comparison is supplied, so none is claimed here.",
-diagram:`flowchart LR
-A[Daily / weekly / monthly KPIs] --> B[Validation + preparation]
-B --> C[AutoETS forecast]
-C --> D[Conformal prediction intervals]
-A --> E[Observed values]
-D --> F[Compare observation to expected range]
-E --> F
-F --> G[Point anomaly]
-F --> H[Contextual anomaly]
-F --> I[Collective anomaly]
-G --> J[Review / investigation]
-H --> J
-I --> J`,
-url:null}
-};
-function renderCase(key){
- const c=cases[key]; const panel=document.getElementById('casePanel');
- panel.innerHTML=`<div class="kicker">${c.num}</div><h3>${c.title}</h3><p class="summary">${c.summary}</p><div class="meta">${c.tags.map(t=>`<span>${t}</span>`).join('')}</div>
- <div class="case-grid"><div><h4>Problem framing</h4><p>${c.problem}</p><h4>Architecture & key decisions</h4><ul>${c.design.map(x=>`<li>${x}</li>`).join('')}</ul></div><div><h4>Security & reliability</h4><p>${c.security}</p><h4>Impact & evidence</h4><p>${c.impact}</p></div></div>
- <div class="diagram"><div class="diagram-head"><span>Conceptual system flow</span><span style="font:10px 'DM Mono';color:#82909e">MERMAID</span></div><pre class="mermaid">${c.diagram}</pre><div class="diagram-note">Conceptual view reconstructed from the supplied career archive; not a deployment diagram or a claim that every box is a separate service.</div></div>
- ${c.url ? `<a class="source-link" href="${c.url}" target="_blank" rel="noreferrer">Open source LinkedIn post ↗</a>` : `<p class="diagram-note">The supplied archive describes this project, but a dedicated LinkedIn post URL for this engine was not identifiable; no post link is fabricated.</p>`}`;
- document.querySelectorAll('.case-tab').forEach(b=>{const active=b.dataset.case===key;b.classList.toggle('active',active);b.setAttribute('aria-selected',active?'true':'false')});
- if(window.mermaid){mermaid.initialize({startOnLoad:false,theme:'dark',securityLevel:'strict',themeVariables:{primaryColor:'#202b35',primaryTextColor:'#edf4f8',primaryBorderColor:'#5d777a',lineColor:'#91baff',secondaryColor:'#19251f',tertiaryColor:'#1a2028',fontFamily:'DM Sans'}});mermaid.run({querySelector:'#casePanel .mermaid'}).catch(()=>{});}
-}
-document.querySelectorAll('.case-tab').forEach(b=>b.addEventListener('click',()=>renderCase(b.dataset.case)));
-document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));document.querySelectorAll('.blog-card').forEach(card=>card.classList.toggle('hidden',b.dataset.filter!=='all'&&card.dataset.category!==b.dataset.filter));}));
-document.getElementById('year').textContent=new Date().getFullYear();renderCase('fhir');
-</script>
-</body></html>
+  <!-- Ambient Atmospheric Glow Canvas -->
+  <div class="ambient-glow orb-indigo"></div>
+  <div class="ambient-glow orb-cyan"></div>
+  <div class="ambient-glow orb-violet"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="topNav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-bracket">&lt;</span>Ramesh<span class="brand-accent">Doddi</span><span class="brand-cursor">_</span><span class="brand-bracket">/&gt;</span>
+      </a>
+      
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#about" class="nav-link">Overview</a>
+        <a href="#pillars" class="nav-link">Pillars</a>
+        <a href="#cases" class="nav-link">Case Studies</a>
+        <a href="#skills" class="nav-link">Arsenal</a>
+        <a href="#writing" class="nav-link">Journal</a>
+        <a href="#experience" class="nav-link">Timeline</a>
+        <a href="resume.pdf" target="_blank" class="nav-btn nav-resume">Resume ↗</a>
+        <a href="#contact" class="nav-btn nav-cta">Let's Connect</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for Senior Engineering & Cloud/AI Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Engineering systems that are <span class="gradient-text">secure, resilient,</span> and built for production.
+          </h1>
+
+          <p class="hero-description">
+            Software Engineer specializing in <strong>C#, .NET 8, Microsoft Azure</strong>, cloud-native microservices, <strong>FHIR healthcare interoperability</strong>, enterprise Generative AI pipelines, and time-series anomaly intelligence.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#cases" class="btn btn-primary">
+              <span>Explore Case Studies</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+            </a>
+            <a href="resume.pdf" target="_blank" class="btn btn-glass">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              <span>Download Resume (PDF)</span>
+            </a>
+            <a href="https://github.com/Ramesh-doddi" target="_blank" rel="noreferrer" class="btn btn-icon" title="GitHub Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ramesh-doddi" target="_blank" rel="noreferrer" class="btn btn-icon" title="LinkedIn Profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+
+          <div class="hero-tech-chips">
+            <span class="tech-badge">C# / .NET 8</span>
+            <span class="tech-badge">Microsoft Azure</span>
+            <span class="tech-badge">HL7 FHIR R4</span>
+            <span class="tech-badge">Azure OpenAI</span>
+            <span class="tech-badge">Semantic Kernel</span>
+            <span class="tech-badge">Time-Series AI</span>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="interactive-terminal">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="terminal-title">ramesh@system-architect ~ %</span>
+              <span class="terminal-badge">LIVE STATUS</span>
+            </div>
+            <div class="terminal-body">
+              <div class="term-row"><span class="term-prompt">$</span> <span class="term-cmd">fetch --engineer-profile</span></div>
+              <div class="term-output">
+                <span class="term-key">name</span>: <span class="term-val">"Ramesh Doddi"</span><br>
+                <span class="term-key">focus</span>: <span class="term-val">"Reliable, Scalable & Secure Systems"</span><br>
+                <span class="term-key">domains</span>: [<span class="term-val">"Enterprise Healthcare"</span>, <span class="term-val">"Applied GenAI"</span>, <span class="term-val">"Distributed Systems"</span>]<br>
+                <span class="term-key">credo</span>: <span class="term-val">"Architecture is a product feature. Measure before claiming."</span>
+              </div>
+              <div class="term-divider"></div>
+              <div class="terminal-stats">
+                <div class="term-stat-item">
+                  <span class="t-stat-num">1.5+</span>
+                  <span class="t-stat-label">Years Production Exp</span>
+                </div>
+                <div class="term-stat-item">
+                  <span class="t-stat-num">6</span>
+                  <span class="t-stat-label">Architectures Built</span>
+                </div>
+                <div class="term-stat-item">
+                  <span class="t-stat-num">9.29</span>
+                  <span class="t-stat-label">B.Tech CGPA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: ENGINEERING PILLARS -->
+    <section id="pillars" class="section">
+      <div class="section-header">
+        <div class="section-tag">01 · ARCHITECTURAL FOUNDATIONS</div>
+        <h2 class="section-title">Where I Build Deep Technical Depth</h2>
+        <p class="section-subtitle">
+          From enterprise healthcare interoperability to real-time generative AI pipelines, the consistent philosophy is engineering for constraints, resilience, and operational safety.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-icon-box">⇄</div>
+          <h3>Healthcare Interoperability & FHIR Standards</h3>
+          <p>Generic FHIR execution engine, HL7 FHIR R4 bidirectional mapping, EHR provider pluggability (Azure FHIR, Epic, Cerner), and eRx multi-protocol workflows.</p>
+          <div class="pillar-footer">
+            <span>Strategy Pattern</span> · <span>mTLS</span> · <span>FHIR RBAC</span>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">◈</div>
+          <h3>Cloud-Native Backend & Microservices</h3>
+          <p>Modern .NET 8 services on Azure Container Apps, API Management governance, asynchronous messaging via Azure Service Bus, and clean architecture principles.</p>
+          <div class="pillar-footer">
+            <span>C# / .NET 8</span> · <span>Azure APIM</span> · <span>Clean Architecture</span>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">⌁</div>
+          <h3>Resilient Generative AI Systems</h3>
+          <p>Production AI integrations using Semantic Kernel and Azure OpenAI. Real-time audio streaming (SSE), deferred background execution, prompt caching, and multi-region failover.</p>
+          <div class="pillar-footer">
+            <span>Semantic Kernel</span> · <span>Azure OpenAI</span> · <span>AI Scribe</span>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">▦</div>
+          <h3>Zero-Trust Security & Multi-Tenant Isolation</h3>
+          <p>Eliminating embedded credentials with Azure Key Vault & Managed Identities. Organization-based database sharding in high-volume EHRs, PHI privacy, and HIPAA compliance.</p>
+          <div class="pillar-footer">
+            <span>Key Vault</span> · <span>DB Sharding</span> · <span>Managed Identities</span>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">∿</div>
+          <h3>Time-Series Anomaly Intelligence</h3>
+          <p>Forward-deployed anomaly detection combining AutoETS statistical forecasting with Conformal Prediction intervals to catch point, contextual, and collective metric shifts.</p>
+          <div class="pillar-footer">
+            <span>AutoETS</span> · <span>Conformal Prediction</span> · <span>Python</span>
+          </div>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-icon-box">⌘</div>
+          <h3>AI-Assisted Developer Productivity</h3>
+          <p>Architecting custom Claude AI agent workflows with reusable skill scripts, GitHub CLI automation for PR creation/reviews, and parallel task isolation using Git worktrees.</p>
+          <div class="pillar-footer">
+            <span>Claude Agents</span> · <span>Git Worktrees</span> · <span>GitHub CLI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: INTERACTIVE FLAGSHIP CASE STUDIES -->
+    <section id="cases" class="section">
+      <div class="section-header">
+        <div class="section-tag">02 · PRODUCTION CASE STUDIES</div>
+        <h2 class="section-title">Systems Architecture Studio</h2>
+        <p class="section-subtitle">
+          Examine the real-world systems I designed and delivered. Each study exposes the business problem, architectural trade-offs, security boundary, live interactive Mermaid diagram, and direct link to the original LinkedIn publication.
+        </p>
+      </div>
+
+      <div class="case-study-studio">
+        <!-- Interactive Tabs Navigation -->
+        <div class="case-tabs-nav" role="tablist" aria-label="Production Case Studies">
+          <button class="case-tab-btn active" data-case="fhir">
+            <span class="tab-index">01</span>
+            <span class="tab-label">Generic FHIR Gateway</span>
+          </button>
+          <button class="case-tab-btn" data-case="erx">
+            <span class="tab-index">02</span>
+            <span class="tab-label">Ensora eRx Integration</span>
+          </button>
+          <button class="case-tab-btn" data-case="vault">
+            <span class="tab-index">03</span>
+            <span class="tab-label">Azure Key Vault Pattern</span>
+          </button>
+          <button class="case-tab-btn" data-case="shard">
+            <span class="tab-index">04</span>
+            <span class="tab-label">Multi-Tenant DB Sharding</span>
+          </button>
+          <button class="case-tab-btn" data-case="scribe">
+            <span class="tab-index">05</span>
+            <span class="tab-label">AI Clinical Scribe</span>
+          </button>
+          <button class="case-tab-btn" data-case="anomaly">
+            <span class="tab-index">06</span>
+            <span class="tab-label">Time-Series Anomaly Engine</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Studio Panel -->
+        <article class="case-display-panel" id="caseDisplayPanel" aria-live="polite">
+          <!-- Populated dynamically by script.js -->
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 3: TECHNICAL ARSENAL / SKILLS MATRIX -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <div class="section-tag">03 · TECHNICAL CAPABILITIES</div>
+        <h2 class="section-title">Endorsed Technical Arsenal</h2>
+        <p class="section-subtitle">
+          Core technologies, frameworks, cloud infrastructure, and patterns verified through production deployments at Teya Health and DataDios.ai.
+        </p>
+      </div>
+
+      <div class="skills-matrix">
+        <div class="skill-group-card">
+          <div class="group-header">
+            <span class="group-icon">💻</span>
+            <h3>Languages & Core Runtimes</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="pill pill-primary">C# (.NET 8)</span>
+            <span class="pill pill-primary">Python</span>
+            <span class="pill pill-primary">Java</span>
+            <span class="pill">SQL (T-SQL, PostgreSQL)</span>
+            <span class="pill">Object-Oriented Design (OOP)</span>
+            <span class="pill">DBMS & Data Structures</span>
+          </div>
+        </div>
+
+        <div class="skill-group-card">
+          <div class="group-header">
+            <span class="group-icon">☁️</span>
+            <h3>Cloud & Azure Ecosystem</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="pill pill-accent">Azure Container Apps</span>
+            <span class="pill pill-accent">Azure App Services</span>
+            <span class="pill pill-accent">Azure API Management</span>
+            <span class="pill">Azure Key Vault</span>
+            <span class="pill">Azure Service Bus</span>
+            <span class="pill">Azure Health Data Services (FHIR)</span>
+            <span class="pill">Azure Managed Identities</span>
+          </div>
+        </div>
+
+        <div class="skill-group-card">
+          <div class="group-header">
+            <span class="group-icon">🤖</span>
+            <h3>Applied AI & Machine Learning</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="pill pill-accent">Azure OpenAI</span>
+            <span class="pill pill-accent">Microsoft Semantic Kernel</span>
+            <span class="pill">AutoETS Time-Series Forecasting</span>
+            <span class="pill">Conformal Prediction</span>
+            <span class="pill">Server-Sent Events (SSE Streaming)</span>
+            <span class="pill">Prompt Caching & Guardrails</span>
+          </div>
+        </div>
+
+        <div class="skill-group-card">
+          <div class="group-header">
+            <span class="group-icon">🏥</span>
+            <h3>Healthcare Standards & Architecture</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="pill pill-primary">HL7 FHIR R4</span>
+            <span class="pill pill-primary">NCScript XML (eRx)</span>
+            <span class="pill">SOAP Web Services</span>
+            <span class="pill">Database Sharding</span>
+            <span class="pill">Entity Framework Core</span>
+            <span class="pill">Mutual TLS (mTLS) & RBAC</span>
+          </div>
+        </div>
+
+        <div class="skill-group-card">
+          <div class="group-header">
+            <span class="group-icon">⚡</span>
+            <h3>Web UI & Frontends</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="pill">Blazor Server</span>
+            <span class="pill">MudBlazor</span>
+            <span class="pill">Syncfusion Components</span>
+            <span class="pill">RESTful APIs</span>
+            <span class="pill">HTML5, CSS3, JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-group-card">
+          <div class="group-header">
+            <span class="group-icon">🛠️</span>
+            <h3>Tooling & Engineering Workflows</h3>
+          </div>
+          <div class="skill-pills-wrap">
+            <span class="pill">Claude AI Agent Workflows</span>
+            <span class="pill">Git Worktrees</span>
+            <span class="pill">GitHub CLI & GitHub Actions</span>
+            <span class="pill">Visual Studio Enterprise</span>
+            <span class="pill">Postman</span>
+            <span class="pill">Docusaurus</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: ENGINEERING JOURNAL / LINKEDIN WRITING VAULT -->
+    <section id="writing" class="section">
+      <div class="section-header">
+        <div class="section-tag">04 · THOUGHT LEADERSHIP & JOURNAL</div>
+        <h2 class="section-title">The Engineering Journal</h2>
+        <p class="section-subtitle">
+          Selected technical publications, real-world post-mortems, and engineering principles from my LinkedIn archive. Every article links directly to the original verified publication.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="journal-filter-bar" role="group" aria-label="Filter journal articles">
+        <button class="filter-btn active" data-filter="all">All Publications</button>
+        <button class="filter-btn" data-filter="health">Healthcare Systems</button>
+        <button class="filter-btn" data-filter="cloud">Cloud & Resilience</button>
+        <button class="filter-btn" data-filter="ai">Applied AI</button>
+        <button class="filter-btn" data-filter="craft">Engineering Craft</button>
+        <button class="filter-btn" data-filter="thinking">Mindset & Philosophy</button>
+      </div>
+
+      <!-- Articles Grid -->
+      <div class="journal-grid" id="journalGrid">
+        <article class="journal-card" data-category="health">
+          <div class="j-card-meta">
+            <span class="j-cat">Healthcare · Architecture</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>Designing a Provider-Pluggable FHIR Gateway in .NET 8</h3>
+          <p>
+            Why duplicating EHR logic is a maintenance trap. Implementing Factory and Strategy patterns, generic FHIR execution engine, and three layers of APIM security (Subscription keys, mTLS, and FHIR RBAC).
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486656983580864512" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="health">
+          <div class="j-card-meta">
+            <span class="j-cat">Healthcare · Integration</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>Unifying REST, XML, HTML Form-POST, and SOAP into One eRx Workflow</h3>
+          <p>
+            Integrating our EHR with Ensora (NewCrop): coordinating JSON token auth, strict NCScript XML generation, auto-submitting browser forms, and background SOAP reconciliation into local records.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486650859599134721" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="cloud">
+          <div class="j-card-meta">
+            <span class="j-cat">Cloud · Security</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>Make the Secure Path the Easy Path: Azure Key Vault Standard</h3>
+          <p>
+            A reusable pattern where services access configuration seamlessly without storing credentials in code. Managed Identities, least privilege, and environment-aware loading pipelines.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486648787600433152" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="ai">
+          <div class="j-card-meta">
+            <span class="j-cat">Applied AI · Resilience</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>AI Reliability Begins Where the Happy Path Ends</h3>
+          <p>
+            Surviving production LLM failures: multi-region Azure OpenAI failover, Polly retry policies with exponential backoff and jitter, warm-up strategies, and non-blocking streaming execution.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486595395817697280" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="health">
+          <div class="j-card-meta">
+            <span class="j-cat">Healthcare · Clinical AI</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>Clinical AI That Supports the Workflow Instead of Interrupting It</h3>
+          <p>
+            Architecting AI Clinical Scribe: real-time SSE progress indicators, deferred background note generation, prompt caching to reduce token spend, and guardrails protecting medical note structure.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486500532904374272" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="health">
+          <div class="j-card-meta">
+            <span class="j-cat">Healthcare · Decision Support</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>Clinical Decision Support Without Alert Fatigue</h3>
+          <p>
+            Solving notification overload in EHR platforms: context hashing, repeat-alert suppression engines, concurrency bounds, and cooldown logic to make clinician alerts high-signal.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486597703855091712" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="cloud">
+          <div class="j-card-meta">
+            <span class="j-cat">Cloud · Performance</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>Fix Repeated Work Before Optimizing the Work</h3>
+          <p>
+            High-performance .NET 8 Blazor optimization: request-scoped memoization, L1 distributed caching, and hydration behavior debugging to eliminate duplicate backend roundtrips.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486626117244837889" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="health">
+          <div class="j-card-meta">
+            <span class="j-cat">Healthcare · Security</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>HIPAA-Minded Engineering is a Set of Design Decisions</h3>
+          <p>
+            How to bake compliance into architecture: Key Vault secret rotation, tenant data isolation, end-to-end encryption, audit logs, and keeping Protected Health Information (PHI) out of traces.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486503630288633856" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="craft">
+          <div class="j-card-meta">
+            <span class="j-cat">Developer Experience</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>Documentation as an Integration Product</h3>
+          <p>
+            Treating internal developer portals like production software: centralized Docusaurus setups, OpenAPI specifications, interactive onboarding guides, and Azure AD SSO integration.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486498277215965184" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="craft">
+          <div class="j-card-meta">
+            <span class="j-cat">Frontend · Architecture</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>Choosing a Blazor Render Mode is a Systems Decision</h3>
+          <p>
+            Architectural trade-offs among Blazor Server, WebAssembly, and Interactive Auto mode. Balancing memory pressure, cold start latencies, network latency, and user experience.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7486601146766372864" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="thinking">
+          <div class="j-card-meta">
+            <span class="j-cat">Engineering Philosophy</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>We Break Software to Understand It</h3>
+          <p>
+            Why testing edge cases, boundary failures, and reproducing faults deliberately is the highest-leverage way to master system behavior and build antifragile platforms.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7475269084629196801" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+
+        <article class="journal-card" data-category="thinking">
+          <div class="j-card-meta">
+            <span class="j-cat">AI & Human Factors</span>
+            <span class="j-badge">Verified Post</span>
+          </div>
+          <h3>When Creation Gets Faster, Understanding Becomes the Bottleneck</h3>
+          <p>
+            As generative models accelerate raw code production, human architectural review, critical thinking, and system verification become the most critical skills for senior engineers.
+          </p>
+          <a href="https://www.linkedin.com/feed/update/urn%3Ali%3Ashare%3A7480294759631065089" target="_blank" rel="noreferrer" class="j-link">
+            <span>Read Original on LinkedIn</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 5: CAREER TIMELINE & EDUCATION -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <div class="section-tag">05 · VERIFIED TRAJECTORY</div>
+        <h2 class="section-title">Career Experience & Academic Honors</h2>
+        <p class="section-subtitle">
+          Proven production contributions across forward-deployed AI engineering, enterprise cloud EHR systems, and top academic honors.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- DataDios -->
+        <div class="timeline-block">
+          <div class="t-marker"></div>
+          <div class="t-card">
+            <div class="t-header">
+              <span class="t-duration">JUL 2026 — PRESENT</span>
+              <span class="t-badge">Forward Deployed AI</span>
+            </div>
+            <h3 class="t-title">Software Engineer / Forward Deployed Engineer</h3>
+            <h4 class="t-company">DataDios.ai · San Francisco, CA</h4>
+            <ul class="t-achievements">
+              <li>Designed and deployed a multi-model time-series anomaly detection engine combining AutoETS statistical forecasting with conformal prediction intervals across daily, weekly, and monthly enterprise KPIs.</li>
+              <li>Engineered custom Claude AI agent workflows with reusable skill scripts and instructions to automate development tasks, GitHub PR creation, and automated code review pipelines via GitHub CLI.</li>
+              <li>Parallelized development using multiple Git worktrees to isolate tasks, accelerating prototyping and feature branch turnaround without context switching.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Teya Health / Praxzen -->
+        <div class="timeline-block">
+          <div class="t-marker"></div>
+          <div class="t-card">
+            <div class="t-header">
+              <span class="t-duration">JAN 2025 — JUN 2026</span>
+              <span class="t-badge">Enterprise Healthcare</span>
+            </div>
+            <h3 class="t-title">Full Stack Engineer / Software Engineer</h3>
+            <h4 class="t-company">Praxzen · Teya Health · Massachusetts, USA</h4>
+            <ul class="t-achievements">
+              <li>Engineered core backend services and user interfaces for <strong>TeyaHealth</strong>, an enterprise cloud-based Electronic Health Record (EHR) platform using C#, .NET 8, Blazor Server, MudBlazor, and Syncfusion.</li>
+              <li>Engineered cloud-native microservices on Azure Container Apps, secured endpoints with Azure API Management, and implemented organization-based database sharding for multi-tenant scalability.</li>
+              <li>Enhanced the <strong>AI Scribe</strong> ambient documentation assistant using Azure OpenAI, Azure Cognitive Services, and Semantic Kernel with multi-region fallback and Azure Service Bus queue resilience.</li>
+              <li>Built reusable FHIR interoperability integration services, connected e-prescribing workflows with Ensora (NewCrop), and authored developer documentation with Docusaurus.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education Card -->
+        <div class="timeline-block">
+          <div class="t-marker"></div>
+          <div class="t-card academic-card">
+            <div class="t-header">
+              <span class="t-duration">2021 — 2025</span>
+              <span class="t-badge badge-green">CGPA: 9.29 / 10.0</span>
+            </div>
+            <h3 class="t-title">B.Tech in Computer Science & Engineering</h3>
+            <h4 class="t-company">GITAM University, Hyderabad</h4>
+            <p class="academic-desc">
+              Strong foundation in Database Management Systems (DBMS), Object-Oriented Programming (OOP), Data Structures & Algorithms, Distributed Systems, and Software Engineering.
+            </p>
+            <div class="cert-grid">
+              <div class="cert-item">
+                <span class="cert-icon">📜</span>
+                <span>IBM SkillsBuild Internship</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-icon">📜</span>
+                <span>AICTE Virtual Internship</span>
+              </div>
+              <div class="cert-item">
+                <span class="cert-icon">📜</span>
+                <span>TCS iON Career Edge: Young Professional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GET IN TOUCH / CONTACT -->
+    <section id="contact" class="section">
+      <div class="contact-box">
+        <div class="contact-left">
+          <div class="section-tag">06 · DIRECT CONTACT</div>
+          <h2 class="contact-title">Let's Build Something Dependable</h2>
+          <p class="contact-lead">
+            I am always interested in discussing complex backend systems, cloud-native microservices, healthcare interoperability, and production AI engineering.
+          </p>
+
+          <div class="contact-details-list">
+            <div class="c-item">
+              <span class="c-icon">📧</span>
+              <div>
+                <span class="c-label">Direct Email</span>
+                <span class="c-val" id="emailVal">ramesh.r.doddi@gmail.com</span>
+              </div>
+              <button class="c-copy-btn" id="copyEmailBtn" title="Copy to clipboard">Copy</button>
+            </div>
+
+            <div class="c-item">
+              <span class="c-icon">📞</span>
+              <div>
+                <span class="c-label">Direct Phone</span>
+                <span class="c-val">+91 8186985583</span>
+              </div>
+            </div>
+
+            <div class="c-item">
+              <span class="c-icon">📍</span>
+              <div>
+                <span class="c-label">Location</span>
+                <span class="c-val">Anakapalli, Andhra Pradesh, India (Open to Remote & Relocation)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-social-row">
+            <a href="https://github.com/Ramesh-doddi" target="_blank" rel="noreferrer" class="social-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub (@Ramesh-doddi)</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ramesh-doddi" target="_blank" rel="noreferrer" class="social-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn (Ramesh Doddi)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form class="c-form" id="contactForm">
+            <div class="form-title">Send a Direct Inquiry</div>
+            <div class="form-group">
+              <label for="formName">Your Name</label>
+              <input type="text" id="formName" placeholder="Engineering Leader / Recruiter" required>
+            </div>
+            <div class="form-group">
+              <label for="formEmail">Your Work Email</label>
+              <input type="email" id="formEmail" placeholder="name@company.com" required>
+            </div>
+            <div class="form-group">
+              <label for="formMessage">Message</label>
+              <textarea id="formMessage" rows="4" placeholder="Hi Ramesh, I'd like to discuss a software engineering opportunity regarding..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              <span>Send Message</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="f-left">
+        <span class="f-brand">&lt;RameshDoddi /&gt;</span>
+        <span class="f-copy">© <span id="currentYear"></span> Ramesh Doddi. Engineered with clean architecture & modern web standards.</span>
+      </div>
+      <div class="f-right">
+        <a href="#hero">Back to Top ↑</a>
+        <a href="https://github.com/Ramesh-doddi/Ramesh-doddi.github.io" target="_blank" rel="noreferrer">Source Code ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
